@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.leftSideLength = new System.Windows.Forms.NumericUpDown();
             this.LeftSideLengthLabel = new System.Windows.Forms.Label();
             this.leftSideLabel = new System.Windows.Forms.Label();
             this.rightSideLabel = new System.Windows.Forms.Label();
             this.RightSideLengthLabel = new System.Windows.Forms.Label();
-            this.rigthSideLength = new System.Windows.Forms.NumericUpDown();
+            this.rightSideLength = new System.Windows.Forms.NumericUpDown();
             this.midSideLength = new System.Windows.Forms.NumericUpDown();
             this.MidSideLengthLabel = new System.Windows.Forms.Label();
             this.MidSideLabel = new System.Windows.Forms.Label();
@@ -53,8 +54,10 @@
             this.rightSideDoorCount = new System.Windows.Forms.NumericUpDown();
             this.midSideDoorCount = new System.Windows.Forms.NumericUpDown();
             this.calculateButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.leftDoorCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rigthSideLength)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideHeight)).BeginInit();
@@ -63,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.leftSideDoorCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideDoorCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideDoorCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftDoorCountErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // leftSideLength
@@ -129,25 +133,25 @@
             this.RightSideLengthLabel.TabIndex = 6;
             this.RightSideLengthLabel.Text = "Délka pravé strany:";
             // 
-            // rigthSideLength
+            // rightSideLength
             // 
-            this.rigthSideLength.BackColor = System.Drawing.SystemColors.Window;
-            this.rigthSideLength.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rigthSideLength.Increment = new decimal(new int[] {
+            this.rightSideLength.BackColor = System.Drawing.SystemColors.Window;
+            this.rightSideLength.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.rightSideLength.Increment = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.rigthSideLength.Location = new System.Drawing.Point(13, 240);
-            this.rigthSideLength.Margin = new System.Windows.Forms.Padding(7);
-            this.rigthSideLength.Maximum = new decimal(new int[] {
+            this.rightSideLength.Location = new System.Drawing.Point(13, 240);
+            this.rightSideLength.Margin = new System.Windows.Forms.Padding(7);
+            this.rightSideLength.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
-            this.rigthSideLength.Name = "rigthSideLength";
-            this.rigthSideLength.Size = new System.Drawing.Size(280, 28);
-            this.rigthSideLength.TabIndex = 7;
+            this.rightSideLength.Name = "rightSideLength";
+            this.rightSideLength.Size = new System.Drawing.Size(280, 28);
+            this.rightSideLength.TabIndex = 7;
             // 
             // midSideLength
             // 
@@ -303,7 +307,7 @@
             this.panel1.Controls.Add(this.MidSideLabel);
             this.panel1.Controls.Add(this.LeftSideHeightLabel);
             this.panel1.Controls.Add(this.splitter2);
-            this.panel1.Controls.Add(this.rigthSideLength);
+            this.panel1.Controls.Add(this.rightSideLength);
             this.panel1.Controls.Add(this.leftSideLength);
             this.panel1.Controls.Add(this.RightSideLengthLabel);
             this.panel1.Controls.Add(this.rightSideLabel);
@@ -415,12 +419,25 @@
             this.calculateButton.TabIndex = 13;
             this.calculateButton.Text = "Spočítej";
             this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(1007, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(412, 503);
+            this.panel2.TabIndex = 14;
+            // 
+            // leftDoorCountErrorProvider
+            // 
+            this.leftDoorCountErrorProvider.ContainerControl = this;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 753);
+            this.ClientSize = new System.Drawing.Size(1816, 753);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -428,7 +445,7 @@
             this.Name = "Form1";
             this.Text = "Kalkulátor zimní zahrady";
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rigthSideLength)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightSideLength)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideLength)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideHeight)).EndInit();
@@ -438,6 +455,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.leftSideDoorCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideDoorCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideDoorCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftDoorCountErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,7 +467,7 @@
         private System.Windows.Forms.Label leftSideLabel;
         private System.Windows.Forms.Label rightSideLabel;
         private System.Windows.Forms.Label RightSideLengthLabel;
-        private System.Windows.Forms.NumericUpDown rigthSideLength;
+        private System.Windows.Forms.NumericUpDown rightSideLength;
         private System.Windows.Forms.Label MidSideLabel;
         private System.Windows.Forms.NumericUpDown midSideLength;
         private System.Windows.Forms.Label MidSideLengthLabel;
@@ -469,6 +487,8 @@
         private System.Windows.Forms.NumericUpDown midSideDoorCount;
         private System.Windows.Forms.NumericUpDown rightSideDoorCount;
         private System.Windows.Forms.Button calculateButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ErrorProvider leftDoorCountErrorProvider;
     }
 }
 
