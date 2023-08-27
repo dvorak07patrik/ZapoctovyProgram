@@ -114,7 +114,7 @@ namespace ZPProgram
             {
                 VACount = 4;
             }
-            int VALength = Height - 5;
+            int VALength = Height - 4;
             return(VACount, VALength);
 
         }

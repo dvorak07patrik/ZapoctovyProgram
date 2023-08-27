@@ -45,9 +45,7 @@
             this.RightSideHeightLabel = new System.Windows.Forms.Label();
             this.LeftSideHeightLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.midSideDoorCount = new System.Windows.Forms.NumericUpDown();
-            this.rightSideDoorCount = new System.Windows.Forms.NumericUpDown();
-            this.leftSideDoorCount = new System.Windows.Forms.NumericUpDown();
+            this.leftSideDoorComboBox = new System.Windows.Forms.ComboBox();
             this.midSideDoorCountLabel = new System.Windows.Forms.Label();
             this.rightSideDoorCountLabel = new System.Windows.Forms.Label();
             this.leftSideDoorCountLabel = new System.Windows.Forms.Label();
@@ -55,32 +53,57 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.calculateButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.leftDoorCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.splitter3 = new System.Windows.Forms.Splitter();
-            this.splitter4 = new System.Windows.Forms.Splitter();
-            this.splitter5 = new System.Windows.Forms.Splitter();
-            this.splitter6 = new System.Windows.Forms.Splitter();
-            this.splitter7 = new System.Windows.Forms.Splitter();
-            this.splitter8 = new System.Windows.Forms.Splitter();
-            this.leftSideHL = new System.Windows.Forms.Label();
-            this.VLabel = new System.Windows.Forms.Label();
-            this.VMLabel = new System.Windows.Forms.Label();
-            this.HSLabel = new System.Windows.Forms.Label();
-            this.BSLabel = new System.Windows.Forms.Label();
-            this.VALabel = new System.Windows.Forms.Label();
-            this.leftSideHLCountLabel = new System.Windows.Forms.Label();
-            this.leftSideVCountLabel = new System.Windows.Forms.Label();
-            this.leftSideVMCountLabel = new System.Windows.Forms.Label();
-            this.leftSideHSCountLabel = new System.Windows.Forms.Label();
-            this.leftSideBSCountLabel = new System.Windows.Forms.Label();
-            this.leftSideVACountLabel = new System.Windows.Forms.Label();
-            this.leftSideHLLengthLabel = new System.Windows.Forms.Label();
-            this.leftSideVLengthLabel = new System.Windows.Forms.Label();
-            this.leftSideVMLengthLabel = new System.Windows.Forms.Label();
-            this.leftSideHSLengthLabel = new System.Windows.Forms.Label();
-            this.leftSideBSLengthLabel = new System.Windows.Forms.Label();
             this.leftSideVALengthLabel = new System.Windows.Forms.Label();
-            this.LeftSideDoorComboBox = new System.Windows.Forms.ComboBox();
+            this.leftSideBSLengthLabel = new System.Windows.Forms.Label();
+            this.leftSideHSLengthLabel = new System.Windows.Forms.Label();
+            this.leftSideVMLengthLabel = new System.Windows.Forms.Label();
+            this.leftSideVLengthLabel = new System.Windows.Forms.Label();
+            this.leftSideHLLengthLabel = new System.Windows.Forms.Label();
+            this.leftSideVACountLabel = new System.Windows.Forms.Label();
+            this.leftSideBSCountLabel = new System.Windows.Forms.Label();
+            this.leftSideHSCountLabel = new System.Windows.Forms.Label();
+            this.leftSideVMCountLabel = new System.Windows.Forms.Label();
+            this.leftSideVCountLabel = new System.Windows.Forms.Label();
+            this.leftSideHLCountLabel = new System.Windows.Forms.Label();
+            this.VALabel = new System.Windows.Forms.Label();
+            this.BSLabel = new System.Windows.Forms.Label();
+            this.HSLabel = new System.Windows.Forms.Label();
+            this.VMLabel = new System.Windows.Forms.Label();
+            this.VLabel = new System.Windows.Forms.Label();
+            this.leftSideHL = new System.Windows.Forms.Label();
+            this.splitter8 = new System.Windows.Forms.Splitter();
+            this.splitter7 = new System.Windows.Forms.Splitter();
+            this.splitter6 = new System.Windows.Forms.Splitter();
+            this.splitter5 = new System.Windows.Forms.Splitter();
+            this.splitter4 = new System.Windows.Forms.Splitter();
+            this.splitter3 = new System.Windows.Forms.Splitter();
+            this.leftDoorCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.rightSideHLCountLabel = new System.Windows.Forms.Label();
+            this.rightSideVCountLabel = new System.Windows.Forms.Label();
+            this.rightSideVMCountLabel = new System.Windows.Forms.Label();
+            this.rightSideHSCountLabel = new System.Windows.Forms.Label();
+            this.rightSideBSCountLabel = new System.Windows.Forms.Label();
+            this.rightSideVACountLabel = new System.Windows.Forms.Label();
+            this.midSideHLCountLabel = new System.Windows.Forms.Label();
+            this.midSideVCountLabel = new System.Windows.Forms.Label();
+            this.midSideVMCountLabel = new System.Windows.Forms.Label();
+            this.midSideHSCountLabel = new System.Windows.Forms.Label();
+            this.midSideBSCountLabel = new System.Windows.Forms.Label();
+            this.midSideVACountLabel = new System.Windows.Forms.Label();
+            this.rightSideHLLengthLabel = new System.Windows.Forms.Label();
+            this.rightSideVLengthLabel = new System.Windows.Forms.Label();
+            this.rightSideVMLengthLabel = new System.Windows.Forms.Label();
+            this.rightSideHSLengthLabel = new System.Windows.Forms.Label();
+            this.rightSideBSLengthLabel = new System.Windows.Forms.Label();
+            this.rightSideVALengthLabel = new System.Windows.Forms.Label();
+            this.midSideHLLengthLabel = new System.Windows.Forms.Label();
+            this.midSideVLengthLabel = new System.Windows.Forms.Label();
+            this.midSideVMLengthLabel = new System.Windows.Forms.Label();
+            this.midSideHSLengthLabel = new System.Windows.Forms.Label();
+            this.midSideBSLengthLabel = new System.Windows.Forms.Label();
+            this.midSideVALengthLabel = new System.Windows.Forms.Label();
+            this.rightSideDoorComboBox = new System.Windows.Forms.ComboBox();
+            this.midSideDoorComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideLength)).BeginInit();
@@ -88,9 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.rightSideHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftSideHeight)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.midSideDoorCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rightSideDoorCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftSideDoorCount)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftDoorCountErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -315,10 +335,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.LeftSideDoorComboBox);
-            this.panel1.Controls.Add(this.midSideDoorCount);
-            this.panel1.Controls.Add(this.rightSideDoorCount);
-            this.panel1.Controls.Add(this.leftSideDoorCount);
+            this.panel1.Controls.Add(this.midSideDoorComboBox);
+            this.panel1.Controls.Add(this.rightSideDoorComboBox);
+            this.panel1.Controls.Add(this.leftSideDoorComboBox);
             this.panel1.Controls.Add(this.midSideDoorCountLabel);
             this.panel1.Controls.Add(this.rightSideDoorCountLabel);
             this.panel1.Controls.Add(this.leftSideDoorCountLabel);
@@ -344,50 +363,21 @@
             this.panel1.Size = new System.Drawing.Size(989, 503);
             this.panel1.TabIndex = 12;
             // 
-            // midSideDoorCount
+            // leftSideDoorComboBox
             // 
-            this.midSideDoorCount.BackColor = System.Drawing.SystemColors.Window;
-            this.midSideDoorCount.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.midSideDoorCount.Location = new System.Drawing.Point(674, 390);
-            this.midSideDoorCount.Margin = new System.Windows.Forms.Padding(7);
-            this.midSideDoorCount.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.midSideDoorCount.Name = "midSideDoorCount";
-            this.midSideDoorCount.Size = new System.Drawing.Size(280, 28);
-            this.midSideDoorCount.TabIndex = 18;
-            // 
-            // rightSideDoorCount
-            // 
-            this.rightSideDoorCount.BackColor = System.Drawing.SystemColors.Window;
-            this.rightSideDoorCount.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.rightSideDoorCount.Location = new System.Drawing.Point(674, 240);
-            this.rightSideDoorCount.Margin = new System.Windows.Forms.Padding(7);
-            this.rightSideDoorCount.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.rightSideDoorCount.Name = "rightSideDoorCount";
-            this.rightSideDoorCount.Size = new System.Drawing.Size(280, 28);
-            this.rightSideDoorCount.TabIndex = 17;
-            // 
-            // leftSideDoorCount
-            // 
-            this.leftSideDoorCount.BackColor = System.Drawing.SystemColors.Window;
-            this.leftSideDoorCount.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.leftSideDoorCount.Location = new System.Drawing.Point(670, 160);
-            this.leftSideDoorCount.Margin = new System.Windows.Forms.Padding(7);
-            this.leftSideDoorCount.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.leftSideDoorCount.Name = "leftSideDoorCount";
-            this.leftSideDoorCount.Size = new System.Drawing.Size(280, 28);
-            this.leftSideDoorCount.TabIndex = 16;
+            this.leftSideDoorComboBox.FormattingEnabled = true;
+            this.leftSideDoorComboBox.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "4(2+2)",
+            "5(3+2)",
+            "6(3+3)",
+            "8(4+4)"});
+            this.leftSideDoorComboBox.Location = new System.Drawing.Point(674, 90);
+            this.leftSideDoorComboBox.Name = "leftSideDoorComboBox";
+            this.leftSideDoorComboBox.Size = new System.Drawing.Size(121, 30);
+            this.leftSideDoorComboBox.TabIndex = 19;
             // 
             // midSideDoorCountLabel
             // 
@@ -450,6 +440,30 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.midSideVALengthLabel);
+            this.panel2.Controls.Add(this.midSideBSLengthLabel);
+            this.panel2.Controls.Add(this.midSideHSLengthLabel);
+            this.panel2.Controls.Add(this.midSideVMLengthLabel);
+            this.panel2.Controls.Add(this.midSideVLengthLabel);
+            this.panel2.Controls.Add(this.midSideHLLengthLabel);
+            this.panel2.Controls.Add(this.rightSideVALengthLabel);
+            this.panel2.Controls.Add(this.rightSideBSLengthLabel);
+            this.panel2.Controls.Add(this.rightSideHSLengthLabel);
+            this.panel2.Controls.Add(this.rightSideVMLengthLabel);
+            this.panel2.Controls.Add(this.rightSideVLengthLabel);
+            this.panel2.Controls.Add(this.rightSideHLLengthLabel);
+            this.panel2.Controls.Add(this.midSideVACountLabel);
+            this.panel2.Controls.Add(this.midSideBSCountLabel);
+            this.panel2.Controls.Add(this.midSideHSCountLabel);
+            this.panel2.Controls.Add(this.midSideVMCountLabel);
+            this.panel2.Controls.Add(this.midSideVCountLabel);
+            this.panel2.Controls.Add(this.midSideHLCountLabel);
+            this.panel2.Controls.Add(this.rightSideVACountLabel);
+            this.panel2.Controls.Add(this.rightSideBSCountLabel);
+            this.panel2.Controls.Add(this.rightSideHSCountLabel);
+            this.panel2.Controls.Add(this.rightSideVMCountLabel);
+            this.panel2.Controls.Add(this.rightSideVCountLabel);
+            this.panel2.Controls.Add(this.rightSideHLCountLabel);
             this.panel2.Controls.Add(this.leftSideVALengthLabel);
             this.panel2.Controls.Add(this.leftSideBSLengthLabel);
             this.panel2.Controls.Add(this.leftSideHSLengthLabel);
@@ -479,217 +493,15 @@
             this.panel2.Size = new System.Drawing.Size(687, 503);
             this.panel2.TabIndex = 14;
             // 
-            // leftDoorCountErrorProvider
+            // leftSideVALengthLabel
             // 
-            this.leftDoorCountErrorProvider.ContainerControl = this;
-            // 
-            // splitter3
-            // 
-            this.splitter3.Location = new System.Drawing.Point(0, 0);
-            this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(90, 503);
-            this.splitter3.TabIndex = 0;
-            this.splitter3.TabStop = false;
-            // 
-            // splitter4
-            // 
-            this.splitter4.Location = new System.Drawing.Point(90, 0);
-            this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(90, 503);
-            this.splitter4.TabIndex = 1;
-            this.splitter4.TabStop = false;
-            // 
-            // splitter5
-            // 
-            this.splitter5.Location = new System.Drawing.Point(180, 0);
-            this.splitter5.Name = "splitter5";
-            this.splitter5.Size = new System.Drawing.Size(90, 503);
-            this.splitter5.TabIndex = 2;
-            this.splitter5.TabStop = false;
-            // 
-            // splitter6
-            // 
-            this.splitter6.Location = new System.Drawing.Point(270, 0);
-            this.splitter6.Name = "splitter6";
-            this.splitter6.Size = new System.Drawing.Size(90, 503);
-            this.splitter6.TabIndex = 3;
-            this.splitter6.TabStop = false;
-            // 
-            // splitter7
-            // 
-            this.splitter7.Location = new System.Drawing.Point(360, 0);
-            this.splitter7.Name = "splitter7";
-            this.splitter7.Size = new System.Drawing.Size(90, 503);
-            this.splitter7.TabIndex = 4;
-            this.splitter7.TabStop = false;
-            // 
-            // splitter8
-            // 
-            this.splitter8.Location = new System.Drawing.Point(450, 0);
-            this.splitter8.Name = "splitter8";
-            this.splitter8.Size = new System.Drawing.Size(90, 503);
-            this.splitter8.TabIndex = 5;
-            this.splitter8.TabStop = false;
-            // 
-            // leftSideHL
-            // 
-            this.leftSideHL.AutoSize = true;
-            this.leftSideHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHL.Location = new System.Drawing.Point(3, 10);
-            this.leftSideHL.Name = "leftSideHL";
-            this.leftSideHL.Size = new System.Drawing.Size(36, 24);
-            this.leftSideHL.TabIndex = 6;
-            this.leftSideHL.Text = "HL";
-            // 
-            // VLabel
-            // 
-            this.VLabel.AutoSize = true;
-            this.VLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.VLabel.Location = new System.Drawing.Point(96, 10);
-            this.VLabel.Name = "VLabel";
-            this.VLabel.Size = new System.Drawing.Size(24, 24);
-            this.VLabel.TabIndex = 7;
-            this.VLabel.Text = "V";
-            // 
-            // VMLabel
-            // 
-            this.VMLabel.AutoSize = true;
-            this.VMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.VMLabel.Location = new System.Drawing.Point(186, 10);
-            this.VMLabel.Name = "VMLabel";
-            this.VMLabel.Size = new System.Drawing.Size(41, 24);
-            this.VMLabel.TabIndex = 8;
-            this.VMLabel.Text = "VM";
-            // 
-            // HSLabel
-            // 
-            this.HSLabel.AutoSize = true;
-            this.HSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.HSLabel.Location = new System.Drawing.Point(276, 10);
-            this.HSLabel.Name = "HSLabel";
-            this.HSLabel.Size = new System.Drawing.Size(38, 24);
-            this.HSLabel.TabIndex = 9;
-            this.HSLabel.Text = "HS";
-            // 
-            // BSLabel
-            // 
-            this.BSLabel.AutoSize = true;
-            this.BSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BSLabel.Location = new System.Drawing.Point(366, 10);
-            this.BSLabel.Name = "BSLabel";
-            this.BSLabel.Size = new System.Drawing.Size(36, 24);
-            this.BSLabel.TabIndex = 10;
-            this.BSLabel.Text = "BS";
-            // 
-            // VALabel
-            // 
-            this.VALabel.AutoSize = true;
-            this.VALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.VALabel.Location = new System.Drawing.Point(456, 10);
-            this.VALabel.Name = "VALabel";
-            this.VALabel.Size = new System.Drawing.Size(38, 24);
-            this.VALabel.TabIndex = 11;
-            this.VALabel.Text = "VA";
-            // 
-            // leftSideHLCountLabel
-            // 
-            this.leftSideHLCountLabel.AutoSize = true;
-            this.leftSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHLCountLabel.Location = new System.Drawing.Point(3, 56);
-            this.leftSideHLCountLabel.Name = "leftSideHLCountLabel";
-            this.leftSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
-            this.leftSideHLCountLabel.TabIndex = 12;
-            this.leftSideHLCountLabel.Text = "0 ks";
-            // 
-            // leftSideVCountLabel
-            // 
-            this.leftSideVCountLabel.AutoSize = true;
-            this.leftSideVCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVCountLabel.Location = new System.Drawing.Point(96, 56);
-            this.leftSideVCountLabel.Name = "leftSideVCountLabel";
-            this.leftSideVCountLabel.Size = new System.Drawing.Size(38, 20);
-            this.leftSideVCountLabel.TabIndex = 13;
-            this.leftSideVCountLabel.Text = "0 ks";
-            // 
-            // leftSideVMCountLabel
-            // 
-            this.leftSideVMCountLabel.AutoSize = true;
-            this.leftSideVMCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVMCountLabel.Location = new System.Drawing.Point(186, 56);
-            this.leftSideVMCountLabel.Name = "leftSideVMCountLabel";
-            this.leftSideVMCountLabel.Size = new System.Drawing.Size(38, 20);
-            this.leftSideVMCountLabel.TabIndex = 14;
-            this.leftSideVMCountLabel.Text = "0 ks";
-            // 
-            // leftSideHSCountLabel
-            // 
-            this.leftSideHSCountLabel.AutoSize = true;
-            this.leftSideHSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHSCountLabel.Location = new System.Drawing.Point(276, 56);
-            this.leftSideHSCountLabel.Name = "leftSideHSCountLabel";
-            this.leftSideHSCountLabel.Size = new System.Drawing.Size(38, 20);
-            this.leftSideHSCountLabel.TabIndex = 15;
-            this.leftSideHSCountLabel.Text = "0 ks";
-            // 
-            // leftSideBSCountLabel
-            // 
-            this.leftSideBSCountLabel.AutoSize = true;
-            this.leftSideBSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideBSCountLabel.Location = new System.Drawing.Point(366, 56);
-            this.leftSideBSCountLabel.Name = "leftSideBSCountLabel";
-            this.leftSideBSCountLabel.Size = new System.Drawing.Size(38, 20);
-            this.leftSideBSCountLabel.TabIndex = 16;
-            this.leftSideBSCountLabel.Text = "0 ks";
-            // 
-            // leftSideVACountLabel
-            // 
-            this.leftSideVACountLabel.AutoSize = true;
-            this.leftSideVACountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVACountLabel.Location = new System.Drawing.Point(456, 56);
-            this.leftSideVACountLabel.Name = "leftSideVACountLabel";
-            this.leftSideVACountLabel.Size = new System.Drawing.Size(38, 20);
-            this.leftSideVACountLabel.TabIndex = 17;
-            this.leftSideVACountLabel.Text = "0 ks";
-            // 
-            // leftSideHLLengthLabel
-            // 
-            this.leftSideHLLengthLabel.AutoSize = true;
-            this.leftSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHLLengthLabel.Location = new System.Drawing.Point(3, 87);
-            this.leftSideHLLengthLabel.Name = "leftSideHLLengthLabel";
-            this.leftSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
-            this.leftSideHLLengthLabel.TabIndex = 18;
-            this.leftSideHLLengthLabel.Text = "0 mm";
-            // 
-            // leftSideVLengthLabel
-            // 
-            this.leftSideVLengthLabel.AutoSize = true;
-            this.leftSideVLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVLengthLabel.Location = new System.Drawing.Point(96, 87);
-            this.leftSideVLengthLabel.Name = "leftSideVLengthLabel";
-            this.leftSideVLengthLabel.Size = new System.Drawing.Size(48, 20);
-            this.leftSideVLengthLabel.TabIndex = 19;
-            this.leftSideVLengthLabel.Text = "0 mm";
-            // 
-            // leftSideVMLengthLabel
-            // 
-            this.leftSideVMLengthLabel.AutoSize = true;
-            this.leftSideVMLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVMLengthLabel.Location = new System.Drawing.Point(186, 87);
-            this.leftSideVMLengthLabel.Name = "leftSideVMLengthLabel";
-            this.leftSideVMLengthLabel.Size = new System.Drawing.Size(48, 20);
-            this.leftSideVMLengthLabel.TabIndex = 20;
-            this.leftSideVMLengthLabel.Text = "0 mm";
-            // 
-            // leftSideHSLengthLabel
-            // 
-            this.leftSideHSLengthLabel.AutoSize = true;
-            this.leftSideHSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHSLengthLabel.Location = new System.Drawing.Point(276, 87);
-            this.leftSideHSLengthLabel.Name = "leftSideHSLengthLabel";
-            this.leftSideHSLengthLabel.Size = new System.Drawing.Size(48, 20);
-            this.leftSideHSLengthLabel.TabIndex = 21;
-            this.leftSideHSLengthLabel.Text = "0 mm";
+            this.leftSideVALengthLabel.AutoSize = true;
+            this.leftSideVALengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideVALengthLabel.Location = new System.Drawing.Point(456, 87);
+            this.leftSideVALengthLabel.Name = "leftSideVALengthLabel";
+            this.leftSideVALengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.leftSideVALengthLabel.TabIndex = 23;
+            this.leftSideVALengthLabel.Text = "0 mm";
             // 
             // leftSideBSLengthLabel
             // 
@@ -701,20 +513,462 @@
             this.leftSideBSLengthLabel.TabIndex = 22;
             this.leftSideBSLengthLabel.Text = "0 mm";
             // 
-            // leftSideVALengthLabel
+            // leftSideHSLengthLabel
             // 
-            this.leftSideVALengthLabel.AutoSize = true;
-            this.leftSideVALengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVALengthLabel.Location = new System.Drawing.Point(456, 87);
-            this.leftSideVALengthLabel.Name = "leftSideVALengthLabel";
-            this.leftSideVALengthLabel.Size = new System.Drawing.Size(48, 20);
-            this.leftSideVALengthLabel.TabIndex = 23;
-            this.leftSideVALengthLabel.Text = "0 mm";
+            this.leftSideHSLengthLabel.AutoSize = true;
+            this.leftSideHSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideHSLengthLabel.Location = new System.Drawing.Point(276, 87);
+            this.leftSideHSLengthLabel.Name = "leftSideHSLengthLabel";
+            this.leftSideHSLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.leftSideHSLengthLabel.TabIndex = 21;
+            this.leftSideHSLengthLabel.Text = "0 mm";
             // 
-            // LeftSideDoorComboBox
+            // leftSideVMLengthLabel
             // 
-            this.LeftSideDoorComboBox.FormattingEnabled = true;
-            this.LeftSideDoorComboBox.Items.AddRange(new object[] {
+            this.leftSideVMLengthLabel.AutoSize = true;
+            this.leftSideVMLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideVMLengthLabel.Location = new System.Drawing.Point(186, 87);
+            this.leftSideVMLengthLabel.Name = "leftSideVMLengthLabel";
+            this.leftSideVMLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.leftSideVMLengthLabel.TabIndex = 20;
+            this.leftSideVMLengthLabel.Text = "0 mm";
+            // 
+            // leftSideVLengthLabel
+            // 
+            this.leftSideVLengthLabel.AutoSize = true;
+            this.leftSideVLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideVLengthLabel.Location = new System.Drawing.Point(96, 87);
+            this.leftSideVLengthLabel.Name = "leftSideVLengthLabel";
+            this.leftSideVLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.leftSideVLengthLabel.TabIndex = 19;
+            this.leftSideVLengthLabel.Text = "0 mm";
+            // 
+            // leftSideHLLengthLabel
+            // 
+            this.leftSideHLLengthLabel.AutoSize = true;
+            this.leftSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideHLLengthLabel.Location = new System.Drawing.Point(3, 87);
+            this.leftSideHLLengthLabel.Name = "leftSideHLLengthLabel";
+            this.leftSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.leftSideHLLengthLabel.TabIndex = 18;
+            this.leftSideHLLengthLabel.Text = "0 mm";
+            // 
+            // leftSideVACountLabel
+            // 
+            this.leftSideVACountLabel.AutoSize = true;
+            this.leftSideVACountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideVACountLabel.Location = new System.Drawing.Point(456, 56);
+            this.leftSideVACountLabel.Name = "leftSideVACountLabel";
+            this.leftSideVACountLabel.Size = new System.Drawing.Size(38, 20);
+            this.leftSideVACountLabel.TabIndex = 17;
+            this.leftSideVACountLabel.Text = "0 ks";
+            // 
+            // leftSideBSCountLabel
+            // 
+            this.leftSideBSCountLabel.AutoSize = true;
+            this.leftSideBSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideBSCountLabel.Location = new System.Drawing.Point(366, 56);
+            this.leftSideBSCountLabel.Name = "leftSideBSCountLabel";
+            this.leftSideBSCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.leftSideBSCountLabel.TabIndex = 16;
+            this.leftSideBSCountLabel.Text = "0 ks";
+            // 
+            // leftSideHSCountLabel
+            // 
+            this.leftSideHSCountLabel.AutoSize = true;
+            this.leftSideHSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideHSCountLabel.Location = new System.Drawing.Point(276, 56);
+            this.leftSideHSCountLabel.Name = "leftSideHSCountLabel";
+            this.leftSideHSCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.leftSideHSCountLabel.TabIndex = 15;
+            this.leftSideHSCountLabel.Text = "0 ks";
+            // 
+            // leftSideVMCountLabel
+            // 
+            this.leftSideVMCountLabel.AutoSize = true;
+            this.leftSideVMCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideVMCountLabel.Location = new System.Drawing.Point(186, 56);
+            this.leftSideVMCountLabel.Name = "leftSideVMCountLabel";
+            this.leftSideVMCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.leftSideVMCountLabel.TabIndex = 14;
+            this.leftSideVMCountLabel.Text = "0 ks";
+            // 
+            // leftSideVCountLabel
+            // 
+            this.leftSideVCountLabel.AutoSize = true;
+            this.leftSideVCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideVCountLabel.Location = new System.Drawing.Point(96, 56);
+            this.leftSideVCountLabel.Name = "leftSideVCountLabel";
+            this.leftSideVCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.leftSideVCountLabel.TabIndex = 13;
+            this.leftSideVCountLabel.Text = "0 ks";
+            // 
+            // leftSideHLCountLabel
+            // 
+            this.leftSideHLCountLabel.AutoSize = true;
+            this.leftSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideHLCountLabel.Location = new System.Drawing.Point(3, 56);
+            this.leftSideHLCountLabel.Name = "leftSideHLCountLabel";
+            this.leftSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.leftSideHLCountLabel.TabIndex = 12;
+            this.leftSideHLCountLabel.Text = "0 ks";
+            // 
+            // VALabel
+            // 
+            this.VALabel.AutoSize = true;
+            this.VALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.VALabel.Location = new System.Drawing.Point(456, 10);
+            this.VALabel.Name = "VALabel";
+            this.VALabel.Size = new System.Drawing.Size(38, 24);
+            this.VALabel.TabIndex = 11;
+            this.VALabel.Text = "VA";
+            // 
+            // BSLabel
+            // 
+            this.BSLabel.AutoSize = true;
+            this.BSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.BSLabel.Location = new System.Drawing.Point(366, 10);
+            this.BSLabel.Name = "BSLabel";
+            this.BSLabel.Size = new System.Drawing.Size(36, 24);
+            this.BSLabel.TabIndex = 10;
+            this.BSLabel.Text = "BS";
+            // 
+            // HSLabel
+            // 
+            this.HSLabel.AutoSize = true;
+            this.HSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.HSLabel.Location = new System.Drawing.Point(276, 10);
+            this.HSLabel.Name = "HSLabel";
+            this.HSLabel.Size = new System.Drawing.Size(38, 24);
+            this.HSLabel.TabIndex = 9;
+            this.HSLabel.Text = "HS";
+            // 
+            // VMLabel
+            // 
+            this.VMLabel.AutoSize = true;
+            this.VMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.VMLabel.Location = new System.Drawing.Point(186, 10);
+            this.VMLabel.Name = "VMLabel";
+            this.VMLabel.Size = new System.Drawing.Size(41, 24);
+            this.VMLabel.TabIndex = 8;
+            this.VMLabel.Text = "VM";
+            // 
+            // VLabel
+            // 
+            this.VLabel.AutoSize = true;
+            this.VLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.VLabel.Location = new System.Drawing.Point(96, 10);
+            this.VLabel.Name = "VLabel";
+            this.VLabel.Size = new System.Drawing.Size(24, 24);
+            this.VLabel.TabIndex = 7;
+            this.VLabel.Text = "V";
+            // 
+            // leftSideHL
+            // 
+            this.leftSideHL.AutoSize = true;
+            this.leftSideHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideHL.Location = new System.Drawing.Point(3, 10);
+            this.leftSideHL.Name = "leftSideHL";
+            this.leftSideHL.Size = new System.Drawing.Size(36, 24);
+            this.leftSideHL.TabIndex = 6;
+            this.leftSideHL.Text = "HL";
+            // 
+            // splitter8
+            // 
+            this.splitter8.Location = new System.Drawing.Point(450, 0);
+            this.splitter8.Name = "splitter8";
+            this.splitter8.Size = new System.Drawing.Size(90, 503);
+            this.splitter8.TabIndex = 5;
+            this.splitter8.TabStop = false;
+            // 
+            // splitter7
+            // 
+            this.splitter7.Location = new System.Drawing.Point(360, 0);
+            this.splitter7.Name = "splitter7";
+            this.splitter7.Size = new System.Drawing.Size(90, 503);
+            this.splitter7.TabIndex = 4;
+            this.splitter7.TabStop = false;
+            // 
+            // splitter6
+            // 
+            this.splitter6.Location = new System.Drawing.Point(270, 0);
+            this.splitter6.Name = "splitter6";
+            this.splitter6.Size = new System.Drawing.Size(90, 503);
+            this.splitter6.TabIndex = 3;
+            this.splitter6.TabStop = false;
+            // 
+            // splitter5
+            // 
+            this.splitter5.Location = new System.Drawing.Point(180, 0);
+            this.splitter5.Name = "splitter5";
+            this.splitter5.Size = new System.Drawing.Size(90, 503);
+            this.splitter5.TabIndex = 2;
+            this.splitter5.TabStop = false;
+            // 
+            // splitter4
+            // 
+            this.splitter4.Location = new System.Drawing.Point(90, 0);
+            this.splitter4.Name = "splitter4";
+            this.splitter4.Size = new System.Drawing.Size(90, 503);
+            this.splitter4.TabIndex = 1;
+            this.splitter4.TabStop = false;
+            // 
+            // splitter3
+            // 
+            this.splitter3.Location = new System.Drawing.Point(0, 0);
+            this.splitter3.Name = "splitter3";
+            this.splitter3.Size = new System.Drawing.Size(90, 503);
+            this.splitter3.TabIndex = 0;
+            this.splitter3.TabStop = false;
+            // 
+            // leftDoorCountErrorProvider
+            // 
+            this.leftDoorCountErrorProvider.ContainerControl = this;
+            // 
+            // rightSideHLCountLabel
+            // 
+            this.rightSideHLCountLabel.AutoSize = true;
+            this.rightSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideHLCountLabel.Location = new System.Drawing.Point(3, 210);
+            this.rightSideHLCountLabel.Name = "rightSideHLCountLabel";
+            this.rightSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.rightSideHLCountLabel.TabIndex = 24;
+            this.rightSideHLCountLabel.Text = "0 ks";
+            // 
+            // rightSideVCountLabel
+            // 
+            this.rightSideVCountLabel.AutoSize = true;
+            this.rightSideVCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideVCountLabel.Location = new System.Drawing.Point(96, 210);
+            this.rightSideVCountLabel.Name = "rightSideVCountLabel";
+            this.rightSideVCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.rightSideVCountLabel.TabIndex = 25;
+            this.rightSideVCountLabel.Text = "0 ks";
+            // 
+            // rightSideVMCountLabel
+            // 
+            this.rightSideVMCountLabel.AutoSize = true;
+            this.rightSideVMCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideVMCountLabel.Location = new System.Drawing.Point(186, 210);
+            this.rightSideVMCountLabel.Name = "rightSideVMCountLabel";
+            this.rightSideVMCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.rightSideVMCountLabel.TabIndex = 26;
+            this.rightSideVMCountLabel.Text = "0 ks";
+            // 
+            // rightSideHSCountLabel
+            // 
+            this.rightSideHSCountLabel.AutoSize = true;
+            this.rightSideHSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideHSCountLabel.Location = new System.Drawing.Point(276, 210);
+            this.rightSideHSCountLabel.Name = "rightSideHSCountLabel";
+            this.rightSideHSCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.rightSideHSCountLabel.TabIndex = 27;
+            this.rightSideHSCountLabel.Text = "0 ks";
+            // 
+            // rightSideBSCountLabel
+            // 
+            this.rightSideBSCountLabel.AutoSize = true;
+            this.rightSideBSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideBSCountLabel.Location = new System.Drawing.Point(366, 210);
+            this.rightSideBSCountLabel.Name = "rightSideBSCountLabel";
+            this.rightSideBSCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.rightSideBSCountLabel.TabIndex = 28;
+            this.rightSideBSCountLabel.Text = "0 ks";
+            // 
+            // rightSideVACountLabel
+            // 
+            this.rightSideVACountLabel.AutoSize = true;
+            this.rightSideVACountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideVACountLabel.Location = new System.Drawing.Point(456, 210);
+            this.rightSideVACountLabel.Name = "rightSideVACountLabel";
+            this.rightSideVACountLabel.Size = new System.Drawing.Size(38, 20);
+            this.rightSideVACountLabel.TabIndex = 29;
+            this.rightSideVACountLabel.Text = "0 ks";
+            // 
+            // midSideHLCountLabel
+            // 
+            this.midSideHLCountLabel.AutoSize = true;
+            this.midSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideHLCountLabel.Location = new System.Drawing.Point(3, 360);
+            this.midSideHLCountLabel.Name = "midSideHLCountLabel";
+            this.midSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.midSideHLCountLabel.TabIndex = 30;
+            this.midSideHLCountLabel.Text = "0 ks";
+            // 
+            // midSideVCountLabel
+            // 
+            this.midSideVCountLabel.AutoSize = true;
+            this.midSideVCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideVCountLabel.Location = new System.Drawing.Point(96, 360);
+            this.midSideVCountLabel.Name = "midSideVCountLabel";
+            this.midSideVCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.midSideVCountLabel.TabIndex = 31;
+            this.midSideVCountLabel.Text = "0 ks";
+            // 
+            // midSideVMCountLabel
+            // 
+            this.midSideVMCountLabel.AutoSize = true;
+            this.midSideVMCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideVMCountLabel.Location = new System.Drawing.Point(186, 360);
+            this.midSideVMCountLabel.Name = "midSideVMCountLabel";
+            this.midSideVMCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.midSideVMCountLabel.TabIndex = 32;
+            this.midSideVMCountLabel.Text = "0 ks";
+            // 
+            // midSideHSCountLabel
+            // 
+            this.midSideHSCountLabel.AutoSize = true;
+            this.midSideHSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideHSCountLabel.Location = new System.Drawing.Point(276, 360);
+            this.midSideHSCountLabel.Name = "midSideHSCountLabel";
+            this.midSideHSCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.midSideHSCountLabel.TabIndex = 33;
+            this.midSideHSCountLabel.Text = "0 ks";
+            // 
+            // midSideBSCountLabel
+            // 
+            this.midSideBSCountLabel.AutoSize = true;
+            this.midSideBSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideBSCountLabel.Location = new System.Drawing.Point(366, 360);
+            this.midSideBSCountLabel.Name = "midSideBSCountLabel";
+            this.midSideBSCountLabel.Size = new System.Drawing.Size(38, 20);
+            this.midSideBSCountLabel.TabIndex = 34;
+            this.midSideBSCountLabel.Text = "0 ks";
+            // 
+            // midSideVACountLabel
+            // 
+            this.midSideVACountLabel.AutoSize = true;
+            this.midSideVACountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideVACountLabel.Location = new System.Drawing.Point(456, 360);
+            this.midSideVACountLabel.Name = "midSideVACountLabel";
+            this.midSideVACountLabel.Size = new System.Drawing.Size(38, 20);
+            this.midSideVACountLabel.TabIndex = 35;
+            this.midSideVACountLabel.Text = "0 ks";
+            // 
+            // rightSideHLLengthLabel
+            // 
+            this.rightSideHLLengthLabel.AutoSize = true;
+            this.rightSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideHLLengthLabel.Location = new System.Drawing.Point(3, 240);
+            this.rightSideHLLengthLabel.Name = "rightSideHLLengthLabel";
+            this.rightSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.rightSideHLLengthLabel.TabIndex = 36;
+            this.rightSideHLLengthLabel.Text = "0 mm";
+            // 
+            // rightSideVLengthLabel
+            // 
+            this.rightSideVLengthLabel.AutoSize = true;
+            this.rightSideVLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideVLengthLabel.Location = new System.Drawing.Point(96, 240);
+            this.rightSideVLengthLabel.Name = "rightSideVLengthLabel";
+            this.rightSideVLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.rightSideVLengthLabel.TabIndex = 37;
+            this.rightSideVLengthLabel.Text = "0 mm";
+            // 
+            // rightSideVMLengthLabel
+            // 
+            this.rightSideVMLengthLabel.AutoSize = true;
+            this.rightSideVMLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideVMLengthLabel.Location = new System.Drawing.Point(186, 240);
+            this.rightSideVMLengthLabel.Name = "rightSideVMLengthLabel";
+            this.rightSideVMLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.rightSideVMLengthLabel.TabIndex = 38;
+            this.rightSideVMLengthLabel.Text = "0 mm";
+            // 
+            // rightSideHSLengthLabel
+            // 
+            this.rightSideHSLengthLabel.AutoSize = true;
+            this.rightSideHSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideHSLengthLabel.Location = new System.Drawing.Point(276, 240);
+            this.rightSideHSLengthLabel.Name = "rightSideHSLengthLabel";
+            this.rightSideHSLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.rightSideHSLengthLabel.TabIndex = 39;
+            this.rightSideHSLengthLabel.Text = "0 mm";
+            // 
+            // rightSideBSLengthLabel
+            // 
+            this.rightSideBSLengthLabel.AutoSize = true;
+            this.rightSideBSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideBSLengthLabel.Location = new System.Drawing.Point(366, 240);
+            this.rightSideBSLengthLabel.Name = "rightSideBSLengthLabel";
+            this.rightSideBSLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.rightSideBSLengthLabel.TabIndex = 40;
+            this.rightSideBSLengthLabel.Text = "0 mm";
+            // 
+            // rightSideVALengthLabel
+            // 
+            this.rightSideVALengthLabel.AutoSize = true;
+            this.rightSideVALengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideVALengthLabel.Location = new System.Drawing.Point(456, 240);
+            this.rightSideVALengthLabel.Name = "rightSideVALengthLabel";
+            this.rightSideVALengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.rightSideVALengthLabel.TabIndex = 41;
+            this.rightSideVALengthLabel.Text = "0 mm";
+            // 
+            // midSideHLLengthLabel
+            // 
+            this.midSideHLLengthLabel.AutoSize = true;
+            this.midSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideHLLengthLabel.Location = new System.Drawing.Point(3, 390);
+            this.midSideHLLengthLabel.Name = "midSideHLLengthLabel";
+            this.midSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.midSideHLLengthLabel.TabIndex = 42;
+            this.midSideHLLengthLabel.Text = "0 mm";
+            // 
+            // midSideVLengthLabel
+            // 
+            this.midSideVLengthLabel.AutoSize = true;
+            this.midSideVLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideVLengthLabel.Location = new System.Drawing.Point(96, 390);
+            this.midSideVLengthLabel.Name = "midSideVLengthLabel";
+            this.midSideVLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.midSideVLengthLabel.TabIndex = 43;
+            this.midSideVLengthLabel.Text = "0 mm";
+            // 
+            // midSideVMLengthLabel
+            // 
+            this.midSideVMLengthLabel.AutoSize = true;
+            this.midSideVMLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideVMLengthLabel.Location = new System.Drawing.Point(186, 390);
+            this.midSideVMLengthLabel.Name = "midSideVMLengthLabel";
+            this.midSideVMLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.midSideVMLengthLabel.TabIndex = 44;
+            this.midSideVMLengthLabel.Text = "0 mm";
+            // 
+            // midSideHSLengthLabel
+            // 
+            this.midSideHSLengthLabel.AutoSize = true;
+            this.midSideHSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideHSLengthLabel.Location = new System.Drawing.Point(276, 390);
+            this.midSideHSLengthLabel.Name = "midSideHSLengthLabel";
+            this.midSideHSLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.midSideHSLengthLabel.TabIndex = 45;
+            this.midSideHSLengthLabel.Text = "0 mm";
+            // 
+            // midSideBSLengthLabel
+            // 
+            this.midSideBSLengthLabel.AutoSize = true;
+            this.midSideBSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideBSLengthLabel.Location = new System.Drawing.Point(366, 390);
+            this.midSideBSLengthLabel.Name = "midSideBSLengthLabel";
+            this.midSideBSLengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.midSideBSLengthLabel.TabIndex = 46;
+            this.midSideBSLengthLabel.Text = "0 mm";
+            // 
+            // midSideVALengthLabel
+            // 
+            this.midSideVALengthLabel.AutoSize = true;
+            this.midSideVALengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideVALengthLabel.Location = new System.Drawing.Point(456, 390);
+            this.midSideVALengthLabel.Name = "midSideVALengthLabel";
+            this.midSideVALengthLabel.Size = new System.Drawing.Size(48, 20);
+            this.midSideVALengthLabel.TabIndex = 47;
+            this.midSideVALengthLabel.Text = "0 mm";
+            // 
+            // rightSideDoorComboBox
+            // 
+            this.rightSideDoorComboBox.FormattingEnabled = true;
+            this.rightSideDoorComboBox.Items.AddRange(new object[] {
             "2",
             "3",
             "4",
@@ -722,10 +976,26 @@
             "5(3+2)",
             "6(3+3)",
             "8(4+4)"});
-            this.LeftSideDoorComboBox.Location = new System.Drawing.Point(674, 90);
-            this.LeftSideDoorComboBox.Name = "LeftSideDoorComboBox";
-            this.LeftSideDoorComboBox.Size = new System.Drawing.Size(121, 30);
-            this.LeftSideDoorComboBox.TabIndex = 19;
+            this.rightSideDoorComboBox.Location = new System.Drawing.Point(674, 238);
+            this.rightSideDoorComboBox.Name = "rightSideDoorComboBox";
+            this.rightSideDoorComboBox.Size = new System.Drawing.Size(121, 30);
+            this.rightSideDoorComboBox.TabIndex = 20;
+            // 
+            // midSideDoorComboBox
+            // 
+            this.midSideDoorComboBox.FormattingEnabled = true;
+            this.midSideDoorComboBox.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "4(2+2)",
+            "5(3+2)",
+            "6(3+3)",
+            "8(4+4)"});
+            this.midSideDoorComboBox.Location = new System.Drawing.Point(674, 388);
+            this.midSideDoorComboBox.Name = "midSideDoorComboBox";
+            this.midSideDoorComboBox.Size = new System.Drawing.Size(121, 30);
+            this.midSideDoorComboBox.TabIndex = 21;
             // 
             // Form1
             // 
@@ -747,9 +1017,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.leftSideHeight)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.midSideDoorCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rightSideDoorCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.leftSideDoorCount)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftDoorCountErrorProvider)).EndInit();
@@ -777,12 +1044,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.NumericUpDown leftSideDoorCount;
         private System.Windows.Forms.Label midSideDoorCountLabel;
         private System.Windows.Forms.Label rightSideDoorCountLabel;
         private System.Windows.Forms.Label leftSideDoorCountLabel;
-        private System.Windows.Forms.NumericUpDown midSideDoorCount;
-        private System.Windows.Forms.NumericUpDown rightSideDoorCount;
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ErrorProvider leftDoorCountErrorProvider;
@@ -810,7 +1074,33 @@
         private System.Windows.Forms.Label leftSideVMLengthLabel;
         private System.Windows.Forms.Label leftSideVLengthLabel;
         private System.Windows.Forms.Label leftSideHLLengthLabel;
-        private System.Windows.Forms.ComboBox LeftSideDoorComboBox;
+        private System.Windows.Forms.ComboBox leftSideDoorComboBox;
+        private System.Windows.Forms.Label rightSideHLCountLabel;
+        private System.Windows.Forms.Label rightSideHLLengthLabel;
+        private System.Windows.Forms.Label midSideVACountLabel;
+        private System.Windows.Forms.Label midSideBSCountLabel;
+        private System.Windows.Forms.Label midSideHSCountLabel;
+        private System.Windows.Forms.Label midSideVMCountLabel;
+        private System.Windows.Forms.Label midSideVCountLabel;
+        private System.Windows.Forms.Label midSideHLCountLabel;
+        private System.Windows.Forms.Label rightSideVACountLabel;
+        private System.Windows.Forms.Label rightSideBSCountLabel;
+        private System.Windows.Forms.Label rightSideHSCountLabel;
+        private System.Windows.Forms.Label rightSideVMCountLabel;
+        private System.Windows.Forms.Label rightSideVCountLabel;
+        private System.Windows.Forms.Label midSideVALengthLabel;
+        private System.Windows.Forms.Label midSideBSLengthLabel;
+        private System.Windows.Forms.Label midSideHSLengthLabel;
+        private System.Windows.Forms.Label midSideVMLengthLabel;
+        private System.Windows.Forms.Label midSideVLengthLabel;
+        private System.Windows.Forms.Label midSideHLLengthLabel;
+        private System.Windows.Forms.Label rightSideVALengthLabel;
+        private System.Windows.Forms.Label rightSideBSLengthLabel;
+        private System.Windows.Forms.Label rightSideHSLengthLabel;
+        private System.Windows.Forms.Label rightSideVMLengthLabel;
+        private System.Windows.Forms.Label rightSideVLengthLabel;
+        private System.Windows.Forms.ComboBox midSideDoorComboBox;
+        private System.Windows.Forms.ComboBox rightSideDoorComboBox;
     }
 }
 

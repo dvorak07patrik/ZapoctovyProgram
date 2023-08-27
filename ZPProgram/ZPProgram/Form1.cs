@@ -19,12 +19,81 @@ namespace ZPProgram
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            Side leftSide = new Side(Convert.ToInt32(leftSideLength.Value), Convert.ToInt32(leftSideHeight.Value), Convert.ToInt32(leftSideDoorCount.Value));
-            Side rightSide = new Side(Convert.ToInt32(rightSideLength.Value), Convert.ToInt32(rightSideHeight.Value), Convert.ToInt32(rightSideDoorCount.Value));
-            Side midSide = new Side(Convert.ToInt32(midSideLength.Value), Convert.ToInt32(midSideHeight.Value), Convert.ToInt32(midSideDoorCount.Value));
-            var nevim = LeftSideDoorComboBox.SelectedIndex;
-            var leftSidePartsValues = leftSide.CountParts();
+            Side leftSide = new Side(Convert.ToInt32(leftSideLength.Value), Convert.ToInt32(leftSideHeight.Value), leftSideDoorComboBox.SelectedIndex);
+            Side rightSide = new Side(Convert.ToInt32(rightSideLength.Value), Convert.ToInt32(rightSideHeight.Value), rightSideDoorComboBox.SelectedIndex);
+            Side midSide = new Side(Convert.ToInt32(midSideLength.Value), Convert.ToInt32(midSideHeight.Value), midSideDoorComboBox.SelectedIndex);
+            var nevim = leftSideDoorComboBox.SelectedIndex;
+            // var leftSidePartsValues = leftSide.CountParts();
+            // leftSideHLCountLabel.Text = leftSidePartsValues.Item1.Item1 + "ks";
+            showLeftSideOutputLabels(leftSide);
+            showRightSideOutputLabels(rightSide);
+            showMidSideOutputLabels(midSide);
+        }
+
+        private void showLeftSideOutputLabels(Side side)
+        {
+            var leftSidePartsValues = side.CountParts();
             leftSideHLCountLabel.Text = leftSidePartsValues.Item1.Item1 + "ks";
+            leftSideHLLengthLabel.Text = leftSidePartsValues.Item1.Item2 + "mm";
+
+            leftSideVCountLabel.Text = leftSidePartsValues.Item2.Item1 + "ks";
+            leftSideVLengthLabel.Text = leftSidePartsValues.Item2.Item2 + "mm";
+
+            leftSideVMCountLabel.Text = leftSidePartsValues.Item3.Item1 + "ks";
+            leftSideVMLengthLabel.Text = leftSidePartsValues.Item3.Item2 + "mm";
+
+            leftSideHSCountLabel.Text = leftSidePartsValues.Item4.Item1 + "ks";
+            leftSideHSLengthLabel.Text = leftSidePartsValues.Item4.Item2 + "mm";
+
+            leftSideBSCountLabel.Text = leftSidePartsValues.Item5.Item1 + "ks";
+            leftSideBSLengthLabel.Text = leftSidePartsValues.Item5.Item2 + "mm";
+
+            leftSideVACountLabel.Text = leftSidePartsValues.Item6.Item1 + "ks";
+            leftSideVALengthLabel.Text = leftSidePartsValues.Item6.Item2 + "mm";
+        }
+
+        private void showRightSideOutputLabels(Side side)
+        {
+            var rightSidePartsValues = side.CountParts();
+            rightSideHLCountLabel.Text = rightSidePartsValues.Item1.Item1 + "ks";
+            rightSideHLLengthLabel.Text = rightSidePartsValues.Item1.Item2 + "mm";
+
+            rightSideVCountLabel.Text = rightSidePartsValues.Item2.Item1 + "ks";
+            rightSideVLengthLabel.Text = rightSidePartsValues.Item2.Item2 + "mm";
+
+            rightSideVMCountLabel.Text = rightSidePartsValues.Item3.Item1 + "ks";
+            rightSideVMLengthLabel.Text = rightSidePartsValues.Item3.Item2 + "mm";
+
+            rightSideHSCountLabel.Text = rightSidePartsValues.Item4.Item1 + "ks";
+            rightSideHSLengthLabel.Text = rightSidePartsValues.Item4.Item2 + "mm";
+
+            rightSideBSCountLabel.Text = rightSidePartsValues.Item5.Item1 + "ks";
+            rightSideBSLengthLabel.Text = rightSidePartsValues.Item5.Item2 + "mm";
+
+            rightSideVACountLabel.Text = rightSidePartsValues.Item6.Item1 + "ks";
+            rightSideVALengthLabel.Text = rightSidePartsValues.Item6.Item2 + "mm";
+        }
+
+        private void showMidSideOutputLabels(Side side)
+        {
+            var midSidePartsValues = side.CountParts();
+            midSideHLCountLabel.Text = midSidePartsValues.Item1.Item1 + "ks";
+            midSideHLLengthLabel.Text = midSidePartsValues.Item1.Item2 + "mm";
+
+            midSideVCountLabel.Text = midSidePartsValues.Item2.Item1 + "ks";
+            midSideVLengthLabel.Text = midSidePartsValues.Item2.Item2 + "mm";
+
+            midSideVMCountLabel.Text = midSidePartsValues.Item3.Item1 + "ks";
+            midSideVMLengthLabel.Text = midSidePartsValues.Item3.Item2 + "mm";
+
+            midSideHSCountLabel.Text = midSidePartsValues.Item4.Item1 + "ks";
+            midSideHSLengthLabel.Text = midSidePartsValues.Item4.Item2 + "mm";
+
+            midSideBSCountLabel.Text = midSidePartsValues.Item5.Item1 + "ks";
+            midSideBSLengthLabel.Text = midSidePartsValues.Item5.Item2 + "mm";
+
+            midSideVACountLabel.Text = midSidePartsValues.Item6.Item1 + "ks";
+            midSideVALengthLabel.Text = midSidePartsValues.Item6.Item2 + "mm";
         }
     }
 }
