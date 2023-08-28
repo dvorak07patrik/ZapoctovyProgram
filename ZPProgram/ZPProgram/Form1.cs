@@ -25,14 +25,20 @@ namespace ZPProgram
             var nevim = leftSideDoorComboBox.SelectedIndex;
             // var leftSidePartsValues = leftSide.CountParts();
             // leftSideHLCountLabel.Text = leftSidePartsValues.Item1.Item1 + "ks";
-            showLeftSideOutputLabels(leftSide);
-            showRightSideOutputLabels(rightSide);
-            showMidSideOutputLabels(midSide);
+
+            var leftSideParstValues = leftSide.CountParts();
+            var rightSideParstValues = rightSide.CountParts();
+            var midSideParstValues = midSide.CountParts();
+            showLeftSideOutputLabels(leftSide, leftSideParstValues);
+            showRightSideOutputLabels(rightSide, rightSideParstValues);
+            showMidSideOutputLabels(midSide, midSideParstValues);
+
+            Form2 form2 = new Form2(leftSide, rightSide, midSide);
+            form2.Show();
         }
 
-        private void showLeftSideOutputLabels(Side side)
+        private void showLeftSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) leftSidePartsValues)
         {
-            var leftSidePartsValues = side.CountParts();
             leftSideHLCountLabel.Text = leftSidePartsValues.Item1.Item1 + "ks";
             leftSideHLLengthLabel.Text = leftSidePartsValues.Item1.Item2 + "mm";
 
@@ -52,9 +58,8 @@ namespace ZPProgram
             leftSideVALengthLabel.Text = leftSidePartsValues.Item6.Item2 + "mm";
         }
 
-        private void showRightSideOutputLabels(Side side)
+        private void showRightSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) rightSidePartsValues)
         {
-            var rightSidePartsValues = side.CountParts();
             rightSideHLCountLabel.Text = rightSidePartsValues.Item1.Item1 + "ks";
             rightSideHLLengthLabel.Text = rightSidePartsValues.Item1.Item2 + "mm";
 
@@ -74,9 +79,8 @@ namespace ZPProgram
             rightSideVALengthLabel.Text = rightSidePartsValues.Item6.Item2 + "mm";
         }
 
-        private void showMidSideOutputLabels(Side side)
-        {
-            var midSidePartsValues = side.CountParts();
+        private void showMidSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) midSidePartsValues)
+        { 
             midSideHLCountLabel.Text = midSidePartsValues.Item1.Item1 + "ks";
             midSideHLLengthLabel.Text = midSidePartsValues.Item1.Item2 + "mm";
 

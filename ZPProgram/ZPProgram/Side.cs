@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ZPProgram
 {
-    internal class Side
+    //public instead of internatl becouse of error on Form2 constructor accesibility for Side type
+    public class Side
     {
         private double Length { get; set; }
         private int Height { get; set; }
