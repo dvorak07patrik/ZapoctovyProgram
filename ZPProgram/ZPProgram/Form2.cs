@@ -15,6 +15,10 @@ namespace ZPProgram
         public Form2(Side leftSide, Side rightSide, Side midSide)
         {
             InitializeComponent();
+            if (leftSide.length >= 1000)
+            {
+                
+            }
         }
 
         private void Form2_Paint(object sender, PaintEventArgs e)

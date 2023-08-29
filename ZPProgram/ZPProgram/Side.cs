@@ -58,6 +58,11 @@ namespace ZPProgram
 
         }
 
+        public double length
+        {
+            get { return Length; }
+        }
+
         public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) CountParts()
         {
             return (CountHL(), CountV(), CountVM(), CountHSandBS(), CountHSandBS(), CountVA());
