@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ZPProgram
@@ -63,10 +64,17 @@ namespace ZPProgram
             get { return Length; }
         }
 
-        public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) CountParts()
+        public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int,int)) CountParts()
         {
-            return (CountHL(), CountV(), CountVM(), CountHSandBS(), CountHSandBS(), CountVA());
+            return (CountHL(), CountV(), CountVM(), CountHSandBS(), CountHSandBS(), CountVA(), CountGlass());
             
+        }
+
+        public (int, int) CountGlass()
+        {
+            int width = CountHL().Item2 + 13;
+            int height = CountV().Item2 - 94;
+            return (width, height);
         }
 
         public (int,int) CountHL()
@@ -74,7 +82,7 @@ namespace ZPProgram
             int HLCount;
             int HLLength;
             HLCount = Convert.ToInt32(NumberOfDoors * 2);
-            HLLength = Convert.ToInt32((Length - Subtractor) / NumberOfDoors);
+            // HLLength = Convert.ToInt32((Length - Subtractor) / NumberOfDoors);
             HLLength = Convert.ToInt32(((Length + ((NumberOfDoors - 1) * 40) - 16) / NumberOfDoors) - 76);
             return (HLCount, HLLength);
         }

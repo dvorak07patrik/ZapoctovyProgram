@@ -37,7 +37,7 @@ namespace ZPProgram
             form2.Show();
         }
 
-        private void showLeftSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) leftSidePartsValues)
+        private void showLeftSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) leftSidePartsValues)
         {
             leftSideHLCountLabel.Text = leftSidePartsValues.Item1.Item1 + "ks";
             leftSideHLLengthLabel.Text = leftSidePartsValues.Item1.Item2 + "mm";
@@ -58,7 +58,7 @@ namespace ZPProgram
             leftSideVALengthLabel.Text = leftSidePartsValues.Item6.Item2 + "mm";
         }
 
-        private void showRightSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) rightSidePartsValues)
+        private void showRightSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) rightSidePartsValues)
         {
             rightSideHLCountLabel.Text = rightSidePartsValues.Item1.Item1 + "ks";
             rightSideHLLengthLabel.Text = rightSidePartsValues.Item1.Item2 + "mm";
@@ -79,7 +79,7 @@ namespace ZPProgram
             rightSideVALengthLabel.Text = rightSidePartsValues.Item6.Item2 + "mm";
         }
 
-        private void showMidSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) midSidePartsValues)
+        private void showMidSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) midSidePartsValues)
         { 
             midSideHLCountLabel.Text = midSidePartsValues.Item1.Item1 + "ks";
             midSideHLLengthLabel.Text = midSidePartsValues.Item1.Item2 + "mm";
