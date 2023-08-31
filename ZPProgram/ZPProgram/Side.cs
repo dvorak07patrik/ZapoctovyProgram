@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ZPProgram
 {
+    // class Side used for storing sides properties and counting sides parts
     //public instead of internatl becouse of error on Form2 constructor accesibility for Side type
     public class Side
     {
@@ -16,6 +17,7 @@ namespace ZPProgram
         private double Subtractor { get; set; }
         private int DoorsComboIndex { get; set; }
 
+        // side constructor, assignes variables according to doorsComboIndex chosen by user
         public Side(int length, int height, int doorsComboIndex)
         {
             Length = length;
@@ -56,7 +58,6 @@ namespace ZPProgram
                 NumberOfDoors = 8;
                 Subtractor = 24;
             }
-
         }
 
         public double length
@@ -64,10 +65,21 @@ namespace ZPProgram
             get { return Length; }
         }
 
+        public double numberOfDoors
+        {
+            get { return NumberOfDoors; }
+        }
+
+        public double height
+        {
+            get { return Height; }
+        }
+
+
+        // calls counting function for all parts
         public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) CountParts()
         {
             return (CountHL(), CountV(), CountVM(), CountHSandBS(), CountHSandBS(), CountVA(), CountGlass());
-
         }
 
         public (int, int) CountGlass()
@@ -77,13 +89,14 @@ namespace ZPProgram
             return (width, height);
         }
 
+
         public (int, int) CountHL()
         {
             int HLCount;
             int HLLength;
             HLCount = Convert.ToInt32(NumberOfDoors * 2);
             // HLLength = Convert.ToInt32((Length - Subtractor) / NumberOfDoors);
-            HLLength = Convert.ToInt32(Math.Floor(((Length + ((NumberOfDoors - 1) * 40) - 16) / NumberOfDoors) - 76));
+            HLLength = Convert.ToInt32(Math.Floor(((Length + ((NumberOfDoors - 1) * 40) - Subtractor) / NumberOfDoors) - 76));
             return (HLCount, HLLength);
         }
 
