@@ -55,7 +55,13 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.calculateButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.splitter10 = new System.Windows.Forms.Splitter();
+            this.midSideGlassWidthLabel = new System.Windows.Forms.Label();
+            this.rightSideGlassWidthLabel = new System.Windows.Forms.Label();
+            this.leftSideGlassWidthLabel = new System.Windows.Forms.Label();
+            this.midSideGlassHeightLabel = new System.Windows.Forms.Label();
+            this.rightSideGlassHeightLabel = new System.Windows.Forms.Label();
+            this.leftSideGlassHeightLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.splitter9 = new System.Windows.Forms.Splitter();
             this.midSideVALengthLabel = new System.Windows.Forms.Label();
             this.midSideBSLengthLabel = new System.Windows.Forms.Label();
@@ -105,7 +111,9 @@
             this.splitter5 = new System.Windows.Forms.Splitter();
             this.splitter4 = new System.Windows.Forms.Splitter();
             this.splitter3 = new System.Windows.Forms.Splitter();
-            this.leftDoorCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.leftSideErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.rightSideErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.midSideErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideLength)).BeginInit();
@@ -114,7 +122,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.leftSideHeight)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leftDoorCountErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftSideErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightSideErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midSideErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // leftSideLength
@@ -127,14 +137,14 @@
             0,
             0});
             this.leftSideLength.Location = new System.Drawing.Point(14, 98);
-            this.leftSideLength.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.leftSideLength.Margin = new System.Windows.Forms.Padding(8);
             this.leftSideLength.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.leftSideLength.Name = "leftSideLength";
-            this.leftSideLength.Size = new System.Drawing.Size(308, 29);
+            this.leftSideLength.Size = new System.Drawing.Size(170, 29);
             this.leftSideLength.TabIndex = 0;
             this.leftSideLength.Value = new decimal(new int[] {
             3000,
@@ -196,14 +206,14 @@
             0,
             0});
             this.rightSideLength.Location = new System.Drawing.Point(14, 262);
-            this.rightSideLength.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.rightSideLength.Margin = new System.Windows.Forms.Padding(8);
             this.rightSideLength.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.rightSideLength.Name = "rightSideLength";
-            this.rightSideLength.Size = new System.Drawing.Size(308, 29);
+            this.rightSideLength.Size = new System.Drawing.Size(170, 29);
             this.rightSideLength.TabIndex = 7;
             this.rightSideLength.Value = new decimal(new int[] {
             3000,
@@ -221,14 +231,14 @@
             0,
             0});
             this.midSideLength.Location = new System.Drawing.Point(14, 425);
-            this.midSideLength.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.midSideLength.Margin = new System.Windows.Forms.Padding(8);
             this.midSideLength.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.midSideLength.Name = "midSideLength";
-            this.midSideLength.Size = new System.Drawing.Size(308, 29);
+            this.midSideLength.Size = new System.Drawing.Size(170, 29);
             this.midSideLength.TabIndex = 10;
             this.midSideLength.Value = new decimal(new int[] {
             4000,
@@ -266,15 +276,15 @@
             0,
             0,
             0});
-            this.midSideHeight.Location = new System.Drawing.Point(378, 425);
-            this.midSideHeight.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.midSideHeight.Location = new System.Drawing.Point(255, 425);
+            this.midSideHeight.Margin = new System.Windows.Forms.Padding(8);
             this.midSideHeight.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.midSideHeight.Name = "midSideHeight";
-            this.midSideHeight.Size = new System.Drawing.Size(308, 29);
+            this.midSideHeight.Size = new System.Drawing.Size(170, 29);
             this.midSideHeight.TabIndex = 11;
             this.midSideHeight.Value = new decimal(new int[] {
             2100,
@@ -291,15 +301,15 @@
             0,
             0,
             0});
-            this.rightSideHeight.Location = new System.Drawing.Point(378, 262);
-            this.rightSideHeight.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.rightSideHeight.Location = new System.Drawing.Point(255, 262);
+            this.rightSideHeight.Margin = new System.Windows.Forms.Padding(8);
             this.rightSideHeight.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.rightSideHeight.Name = "rightSideHeight";
-            this.rightSideHeight.Size = new System.Drawing.Size(308, 29);
+            this.rightSideHeight.Size = new System.Drawing.Size(170, 29);
             this.rightSideHeight.TabIndex = 11;
             this.rightSideHeight.Value = new decimal(new int[] {
             2100,
@@ -316,15 +326,15 @@
             0,
             0,
             0});
-            this.leftSideHeight.Location = new System.Drawing.Point(378, 98);
-            this.leftSideHeight.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.leftSideHeight.Location = new System.Drawing.Point(255, 98);
+            this.leftSideHeight.Margin = new System.Windows.Forms.Padding(8);
             this.leftSideHeight.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.leftSideHeight.Name = "leftSideHeight";
-            this.leftSideHeight.Size = new System.Drawing.Size(308, 29);
+            this.leftSideHeight.Size = new System.Drawing.Size(170, 29);
             this.leftSideHeight.TabIndex = 11;
             this.leftSideHeight.Value = new decimal(new int[] {
             2100,
@@ -336,7 +346,7 @@
             // 
             this.MidSideHeightLabel.AutoSize = true;
             this.MidSideHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MidSideHeightLabel.Location = new System.Drawing.Point(374, 393);
+            this.MidSideHeightLabel.Location = new System.Drawing.Point(251, 393);
             this.MidSideHeightLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.MidSideHeightLabel.Name = "MidSideHeightLabel";
             this.MidSideHeightLabel.Size = new System.Drawing.Size(178, 20);
@@ -347,7 +357,7 @@
             // 
             this.RightSideHeightLabel.AutoSize = true;
             this.RightSideHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.RightSideHeightLabel.Location = new System.Drawing.Point(374, 229);
+            this.RightSideHeightLabel.Location = new System.Drawing.Point(251, 229);
             this.RightSideHeightLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RightSideHeightLabel.Name = "RightSideHeightLabel";
             this.RightSideHeightLabel.Size = new System.Drawing.Size(146, 20);
@@ -358,7 +368,7 @@
             // 
             this.LeftSideHeightLabel.AutoSize = true;
             this.LeftSideHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LeftSideHeightLabel.Location = new System.Drawing.Point(374, 65);
+            this.LeftSideHeightLabel.Location = new System.Drawing.Point(251, 65);
             this.LeftSideHeightLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.LeftSideHeightLabel.Name = "LeftSideHeightLabel";
             this.LeftSideHeightLabel.Size = new System.Drawing.Size(135, 20);
@@ -392,7 +402,7 @@
             this.panel1.Controls.Add(this.splitter1);
             this.panel1.Location = new System.Drawing.Point(13, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 549);
+            this.panel1.Size = new System.Drawing.Size(741, 496);
             this.panel1.TabIndex = 12;
             // 
             // midSideDoorComboBox
@@ -406,7 +416,7 @@
             "5(3+2)",
             "6(3+3)",
             "8(4+4)"});
-            this.midSideDoorComboBox.Location = new System.Drawing.Point(741, 423);
+            this.midSideDoorComboBox.Location = new System.Drawing.Point(495, 425);
             this.midSideDoorComboBox.Name = "midSideDoorComboBox";
             this.midSideDoorComboBox.Size = new System.Drawing.Size(133, 32);
             this.midSideDoorComboBox.TabIndex = 21;
@@ -422,7 +432,7 @@
             "5(3+2)",
             "6(3+3)",
             "8(4+4)"});
-            this.rightSideDoorComboBox.Location = new System.Drawing.Point(741, 260);
+            this.rightSideDoorComboBox.Location = new System.Drawing.Point(495, 262);
             this.rightSideDoorComboBox.Name = "rightSideDoorComboBox";
             this.rightSideDoorComboBox.Size = new System.Drawing.Size(133, 32);
             this.rightSideDoorComboBox.TabIndex = 20;
@@ -439,7 +449,7 @@
             "5(3+2)",
             "6(3+3)",
             "8(4+4)"});
-            this.leftSideDoorComboBox.Location = new System.Drawing.Point(741, 98);
+            this.leftSideDoorComboBox.Location = new System.Drawing.Point(495, 98);
             this.leftSideDoorComboBox.Name = "leftSideDoorComboBox";
             this.leftSideDoorComboBox.Size = new System.Drawing.Size(133, 32);
             this.leftSideDoorComboBox.TabIndex = 19;
@@ -448,7 +458,7 @@
             // 
             this.midSideDoorCountLabel.AutoSize = true;
             this.midSideDoorCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideDoorCountLabel.Location = new System.Drawing.Point(737, 393);
+            this.midSideDoorCountLabel.Location = new System.Drawing.Point(491, 393);
             this.midSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.midSideDoorCountLabel.Name = "midSideDoorCountLabel";
             this.midSideDoorCountLabel.Size = new System.Drawing.Size(162, 20);
@@ -459,7 +469,7 @@
             // 
             this.rightSideDoorCountLabel.AutoSize = true;
             this.rightSideDoorCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideDoorCountLabel.Location = new System.Drawing.Point(737, 229);
+            this.rightSideDoorCountLabel.Location = new System.Drawing.Point(491, 229);
             this.rightSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.rightSideDoorCountLabel.Name = "rightSideDoorCountLabel";
             this.rightSideDoorCountLabel.Size = new System.Drawing.Size(205, 20);
@@ -470,7 +480,7 @@
             // 
             this.leftSideDoorCountLabel.AutoSize = true;
             this.leftSideDoorCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideDoorCountLabel.Location = new System.Drawing.Point(737, 65);
+            this.leftSideDoorCountLabel.Location = new System.Drawing.Point(491, 65);
             this.leftSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.leftSideDoorCountLabel.Name = "leftSideDoorCountLabel";
             this.leftSideDoorCountLabel.Size = new System.Drawing.Size(194, 20);
@@ -479,9 +489,9 @@
             // 
             // splitter2
             // 
-            this.splitter2.Location = new System.Drawing.Point(363, 0);
+            this.splitter2.Location = new System.Drawing.Point(240, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(363, 549);
+            this.splitter2.Size = new System.Drawing.Size(240, 496);
             this.splitter2.TabIndex = 1;
             this.splitter2.TabStop = false;
             // 
@@ -489,13 +499,13 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(363, 549);
+            this.splitter1.Size = new System.Drawing.Size(240, 496);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(14, 611);
+            this.calculateButton.Location = new System.Drawing.Point(13, 558);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(155, 69);
             this.calculateButton.TabIndex = 13;
@@ -505,7 +515,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.splitter10);
+            this.panel2.Controls.Add(this.midSideGlassWidthLabel);
+            this.panel2.Controls.Add(this.rightSideGlassWidthLabel);
+            this.panel2.Controls.Add(this.leftSideGlassWidthLabel);
+            this.panel2.Controls.Add(this.midSideGlassHeightLabel);
+            this.panel2.Controls.Add(this.rightSideGlassHeightLabel);
+            this.panel2.Controls.Add(this.leftSideGlassHeightLabel);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.splitter9);
             this.panel2.Controls.Add(this.midSideVALengthLabel);
             this.panel2.Controls.Add(this.midSideBSLengthLabel);
@@ -555,24 +571,86 @@
             this.panel2.Controls.Add(this.splitter5);
             this.panel2.Controls.Add(this.splitter4);
             this.panel2.Controls.Add(this.splitter3);
-            this.panel2.Location = new System.Drawing.Point(1108, 56);
+            this.panel2.Location = new System.Drawing.Point(760, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(816, 549);
+            this.panel2.Size = new System.Drawing.Size(803, 496);
             this.panel2.TabIndex = 14;
             // 
-            // splitter10
+            // midSideGlassWidthLabel
             // 
-            this.splitter10.Location = new System.Drawing.Point(693, 0);
-            this.splitter10.Name = "splitter10";
-            this.splitter10.Size = new System.Drawing.Size(99, 549);
-            this.splitter10.TabIndex = 50;
-            this.splitter10.TabStop = false;
+            this.midSideGlassWidthLabel.AutoSize = true;
+            this.midSideGlassWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideGlassWidthLabel.Location = new System.Drawing.Point(600, 425);
+            this.midSideGlassWidthLabel.Name = "midSideGlassWidthLabel";
+            this.midSideGlassWidthLabel.Size = new System.Drawing.Size(90, 20);
+            this.midSideGlassWidthLabel.TabIndex = 57;
+            this.midSideGlassWidthLabel.Text = "šířka - 0mm";
+            // 
+            // rightSideGlassWidthLabel
+            // 
+            this.rightSideGlassWidthLabel.AutoSize = true;
+            this.rightSideGlassWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideGlassWidthLabel.Location = new System.Drawing.Point(600, 262);
+            this.rightSideGlassWidthLabel.Name = "rightSideGlassWidthLabel";
+            this.rightSideGlassWidthLabel.Size = new System.Drawing.Size(90, 20);
+            this.rightSideGlassWidthLabel.TabIndex = 56;
+            this.rightSideGlassWidthLabel.Text = "šířka - 0mm";
+            // 
+            // leftSideGlassWidthLabel
+            // 
+            this.leftSideGlassWidthLabel.AutoSize = true;
+            this.leftSideGlassWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideGlassWidthLabel.Location = new System.Drawing.Point(600, 95);
+            this.leftSideGlassWidthLabel.Name = "leftSideGlassWidthLabel";
+            this.leftSideGlassWidthLabel.Size = new System.Drawing.Size(90, 20);
+            this.leftSideGlassWidthLabel.TabIndex = 55;
+            this.leftSideGlassWidthLabel.Text = "šířka - 0mm";
+            // 
+            // midSideGlassHeightLabel
+            // 
+            this.midSideGlassHeightLabel.AutoSize = true;
+            this.midSideGlassHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.midSideGlassHeightLabel.Location = new System.Drawing.Point(600, 393);
+            this.midSideGlassHeightLabel.Name = "midSideGlassHeightLabel";
+            this.midSideGlassHeightLabel.Size = new System.Drawing.Size(96, 20);
+            this.midSideGlassHeightLabel.TabIndex = 54;
+            this.midSideGlassHeightLabel.Text = "výška - 0mm";
+            // 
+            // rightSideGlassHeightLabel
+            // 
+            this.rightSideGlassHeightLabel.AutoSize = true;
+            this.rightSideGlassHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightSideGlassHeightLabel.Location = new System.Drawing.Point(600, 229);
+            this.rightSideGlassHeightLabel.Name = "rightSideGlassHeightLabel";
+            this.rightSideGlassHeightLabel.Size = new System.Drawing.Size(96, 20);
+            this.rightSideGlassHeightLabel.TabIndex = 53;
+            this.rightSideGlassHeightLabel.Text = "výška - 0mm";
+            // 
+            // leftSideGlassHeightLabel
+            // 
+            this.leftSideGlassHeightLabel.AutoSize = true;
+            this.leftSideGlassHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftSideGlassHeightLabel.Location = new System.Drawing.Point(600, 61);
+            this.leftSideGlassHeightLabel.Name = "leftSideGlassHeightLabel";
+            this.leftSideGlassHeightLabel.Size = new System.Drawing.Size(96, 20);
+            this.leftSideGlassHeightLabel.TabIndex = 52;
+            this.leftSideGlassHeightLabel.Text = "výška - 0mm";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(600, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 24);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Sklo";
             // 
             // splitter9
             // 
             this.splitter9.Location = new System.Drawing.Point(594, 0);
             this.splitter9.Name = "splitter9";
-            this.splitter9.Size = new System.Drawing.Size(99, 549);
+            this.splitter9.Size = new System.Drawing.Size(206, 496);
             this.splitter9.TabIndex = 49;
             this.splitter9.TabStop = false;
             // 
@@ -630,7 +708,7 @@
             // 
             this.midSideHLLengthLabel.AutoSize = true;
             this.midSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideHLLengthLabel.Location = new System.Drawing.Point(3, 425);
+            this.midSideHLLengthLabel.Location = new System.Drawing.Point(5, 425);
             this.midSideHLLengthLabel.Name = "midSideHLLengthLabel";
             this.midSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.midSideHLLengthLabel.TabIndex = 42;
@@ -690,7 +768,7 @@
             // 
             this.rightSideHLLengthLabel.AutoSize = true;
             this.rightSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideHLLengthLabel.Location = new System.Drawing.Point(3, 262);
+            this.rightSideHLLengthLabel.Location = new System.Drawing.Point(5, 262);
             this.rightSideHLLengthLabel.Name = "rightSideHLLengthLabel";
             this.rightSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.rightSideHLLengthLabel.TabIndex = 36;
@@ -750,7 +828,7 @@
             // 
             this.midSideHLCountLabel.AutoSize = true;
             this.midSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideHLCountLabel.Location = new System.Drawing.Point(3, 393);
+            this.midSideHLCountLabel.Location = new System.Drawing.Point(5, 393);
             this.midSideHLCountLabel.Name = "midSideHLCountLabel";
             this.midSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
             this.midSideHLCountLabel.TabIndex = 30;
@@ -810,7 +888,7 @@
             // 
             this.rightSideHLCountLabel.AutoSize = true;
             this.rightSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideHLCountLabel.Location = new System.Drawing.Point(3, 229);
+            this.rightSideHLCountLabel.Location = new System.Drawing.Point(5, 229);
             this.rightSideHLCountLabel.Name = "rightSideHLCountLabel";
             this.rightSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
             this.rightSideHLCountLabel.TabIndex = 24;
@@ -870,7 +948,7 @@
             // 
             this.leftSideHLLengthLabel.AutoSize = true;
             this.leftSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHLLengthLabel.Location = new System.Drawing.Point(3, 95);
+            this.leftSideHLLengthLabel.Location = new System.Drawing.Point(5, 95);
             this.leftSideHLLengthLabel.Name = "leftSideHLLengthLabel";
             this.leftSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.leftSideHLLengthLabel.TabIndex = 18;
@@ -930,7 +1008,7 @@
             // 
             this.leftSideHLCountLabel.AutoSize = true;
             this.leftSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHLCountLabel.Location = new System.Drawing.Point(3, 61);
+            this.leftSideHLCountLabel.Location = new System.Drawing.Point(5, 61);
             this.leftSideHLCountLabel.Name = "leftSideHLCountLabel";
             this.leftSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
             this.leftSideHLCountLabel.TabIndex = 12;
@@ -990,7 +1068,7 @@
             // 
             this.leftSideHL.AutoSize = true;
             this.leftSideHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHL.Location = new System.Drawing.Point(3, 11);
+            this.leftSideHL.Location = new System.Drawing.Point(5, 11);
             this.leftSideHL.Name = "leftSideHL";
             this.leftSideHL.Size = new System.Drawing.Size(36, 24);
             this.leftSideHL.TabIndex = 6;
@@ -1000,7 +1078,7 @@
             // 
             this.splitter8.Location = new System.Drawing.Point(495, 0);
             this.splitter8.Name = "splitter8";
-            this.splitter8.Size = new System.Drawing.Size(99, 549);
+            this.splitter8.Size = new System.Drawing.Size(99, 496);
             this.splitter8.TabIndex = 5;
             this.splitter8.TabStop = false;
             // 
@@ -1008,7 +1086,7 @@
             // 
             this.splitter7.Location = new System.Drawing.Point(396, 0);
             this.splitter7.Name = "splitter7";
-            this.splitter7.Size = new System.Drawing.Size(99, 549);
+            this.splitter7.Size = new System.Drawing.Size(99, 496);
             this.splitter7.TabIndex = 4;
             this.splitter7.TabStop = false;
             // 
@@ -1016,7 +1094,7 @@
             // 
             this.splitter6.Location = new System.Drawing.Point(297, 0);
             this.splitter6.Name = "splitter6";
-            this.splitter6.Size = new System.Drawing.Size(99, 549);
+            this.splitter6.Size = new System.Drawing.Size(99, 496);
             this.splitter6.TabIndex = 3;
             this.splitter6.TabStop = false;
             // 
@@ -1024,7 +1102,7 @@
             // 
             this.splitter5.Location = new System.Drawing.Point(198, 0);
             this.splitter5.Name = "splitter5";
-            this.splitter5.Size = new System.Drawing.Size(99, 549);
+            this.splitter5.Size = new System.Drawing.Size(99, 496);
             this.splitter5.TabIndex = 2;
             this.splitter5.TabStop = false;
             // 
@@ -1032,7 +1110,7 @@
             // 
             this.splitter4.Location = new System.Drawing.Point(99, 0);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(99, 549);
+            this.splitter4.Size = new System.Drawing.Size(99, 496);
             this.splitter4.TabIndex = 1;
             this.splitter4.TabStop = false;
             // 
@@ -1040,19 +1118,27 @@
             // 
             this.splitter3.Location = new System.Drawing.Point(0, 0);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(99, 549);
+            this.splitter3.Size = new System.Drawing.Size(99, 496);
             this.splitter3.TabIndex = 0;
             this.splitter3.TabStop = false;
             // 
-            // leftDoorCountErrorProvider
+            // leftSideErrorProvider
             // 
-            this.leftDoorCountErrorProvider.ContainerControl = this;
+            this.leftSideErrorProvider.ContainerControl = this;
+            // 
+            // rightSideErrorProvider
+            // 
+            this.rightSideErrorProvider.ContainerControl = this;
+            // 
+            // midSideErrorProvider
+            // 
+            this.midSideErrorProvider.ContainerControl = this;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1998, 821);
+            this.ClientSize = new System.Drawing.Size(1574, 661);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.panel1);
@@ -1070,7 +1156,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leftDoorCountErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftSideErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightSideErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midSideErrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1100,7 +1188,6 @@
         private System.Windows.Forms.Label leftSideDoorCountLabel;
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ErrorProvider leftDoorCountErrorProvider;
         private System.Windows.Forms.Label leftSideHL;
         private System.Windows.Forms.Splitter splitter8;
         private System.Windows.Forms.Splitter splitter7;
@@ -1152,8 +1239,17 @@
         private System.Windows.Forms.Label rightSideVLengthLabel;
         private System.Windows.Forms.ComboBox midSideDoorComboBox;
         private System.Windows.Forms.ComboBox rightSideDoorComboBox;
-        private System.Windows.Forms.Splitter splitter10;
         private System.Windows.Forms.Splitter splitter9;
+        private System.Windows.Forms.Label leftSideGlassHeightLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label midSideGlassWidthLabel;
+        private System.Windows.Forms.Label rightSideGlassWidthLabel;
+        private System.Windows.Forms.Label leftSideGlassWidthLabel;
+        private System.Windows.Forms.Label midSideGlassHeightLabel;
+        private System.Windows.Forms.Label rightSideGlassHeightLabel;
+        private System.Windows.Forms.ErrorProvider leftSideErrorProvider;
+        private System.Windows.Forms.ErrorProvider rightSideErrorProvider;
+        private System.Windows.Forms.ErrorProvider midSideErrorProvider;
     }
 }
 
