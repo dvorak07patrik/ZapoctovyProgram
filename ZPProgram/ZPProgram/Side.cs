@@ -16,13 +16,13 @@ namespace ZPProgram
         private double Subtractor { get; set; }
         private int DoorsComboIndex { get; set; }
 
-        public Side(int length, int height, int doorsComboIndex) 
-        { 
+        public Side(int length, int height, int doorsComboIndex)
+        {
             Length = length;
             Height = height;
             DoorsComboIndex = doorsComboIndex;
-            if (doorsComboIndex == 0) 
-            { 
+            if (doorsComboIndex == 0)
+            {
                 NumberOfDoors = 2;
                 Subtractor = 16;
             }
@@ -64,10 +64,10 @@ namespace ZPProgram
             get { return Length; }
         }
 
-        public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int,int)) CountParts()
+        public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) CountParts()
         {
             return (CountHL(), CountV(), CountVM(), CountHSandBS(), CountHSandBS(), CountVA(), CountGlass());
-            
+
         }
 
         public (int, int) CountGlass()
@@ -77,17 +77,17 @@ namespace ZPProgram
             return (width, height);
         }
 
-        public (int,int) CountHL()
+        public (int, int) CountHL()
         {
             int HLCount;
             int HLLength;
             HLCount = Convert.ToInt32(NumberOfDoors * 2);
             // HLLength = Convert.ToInt32((Length - Subtractor) / NumberOfDoors);
-            HLLength = Convert.ToInt32(((Length + ((NumberOfDoors - 1) * 40) - 16) / NumberOfDoors) - 76);
+            HLLength = Convert.ToInt32(Math.Floor(((Length + ((NumberOfDoors - 1) * 40) - 16) / NumberOfDoors) - 76));
             return (HLCount, HLLength);
         }
 
-        public (int,int) CountV()
+        public (int, int) CountV()
         {
             int VCount;
             if (DoorsComboIndex < 3)
@@ -103,24 +103,24 @@ namespace ZPProgram
 
         }
 
-        public (int,int) CountVM()
+        public (int, int) CountVM()
         {
             int VMCount = (Convert.ToInt32(NumberOfDoors) * 2) - CountV().Item1;
             int VMLength = Height - 33;
-            return(VMCount, VMLength);
+            return (VMCount, VMLength);
         }
 
-        public (int,int) CountHSandBS()
+        public (int, int) CountHSandBS()
         {
             int HSCount = 1;
             int HSLength = Convert.ToInt32(Length);
-            return(HSCount, HSLength);
+            return (HSCount, HSLength);
         }
 
-        public (int,int) CountVA()
+        public (int, int) CountVA()
         {
             int VACount;
-            if (DoorsComboIndex < 3)
+            if (DoorsComboIndex < 3 || DoorsComboIndex == -1)
             {
                 VACount = 2;
             }

@@ -55,6 +55,8 @@
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.calculateButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.splitter10 = new System.Windows.Forms.Splitter();
+            this.splitter9 = new System.Windows.Forms.Splitter();
             this.midSideVALengthLabel = new System.Windows.Forms.Label();
             this.midSideBSLengthLabel = new System.Windows.Forms.Label();
             this.midSideHSLengthLabel = new System.Windows.Forms.Label();
@@ -104,8 +106,6 @@
             this.splitter4 = new System.Windows.Forms.Splitter();
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.leftDoorCountErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.splitter9 = new System.Windows.Forms.Splitter();
-            this.splitter10 = new System.Windows.Forms.Splitter();
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideLength)).BeginInit();
@@ -126,25 +126,30 @@
             0,
             0,
             0});
-            this.leftSideLength.Location = new System.Drawing.Point(13, 90);
-            this.leftSideLength.Margin = new System.Windows.Forms.Padding(7);
+            this.leftSideLength.Location = new System.Drawing.Point(14, 98);
+            this.leftSideLength.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.leftSideLength.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.leftSideLength.Name = "leftSideLength";
-            this.leftSideLength.Size = new System.Drawing.Size(280, 34);
+            this.leftSideLength.Size = new System.Drawing.Size(308, 29);
             this.leftSideLength.TabIndex = 0;
+            this.leftSideLength.Value = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
             // 
             // LeftSideLengthLabel
             // 
             this.LeftSideLengthLabel.AutoSize = true;
             this.LeftSideLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LeftSideLengthLabel.Location = new System.Drawing.Point(9, 60);
-            this.LeftSideLengthLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.LeftSideLengthLabel.Location = new System.Drawing.Point(10, 65);
+            this.LeftSideLengthLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.LeftSideLengthLabel.Name = "LeftSideLengthLabel";
-            this.LeftSideLengthLabel.Size = new System.Drawing.Size(167, 25);
+            this.LeftSideLengthLabel.Size = new System.Drawing.Size(133, 20);
             this.LeftSideLengthLabel.TabIndex = 1;
             this.LeftSideLengthLabel.Text = "Délka levé strany:";
             // 
@@ -152,10 +157,10 @@
             // 
             this.leftSideLabel.AutoSize = true;
             this.leftSideLabel.Font = new System.Drawing.Font("Bahnschrift Condensed", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideLabel.Location = new System.Drawing.Point(7, 10);
-            this.leftSideLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.leftSideLabel.Location = new System.Drawing.Point(8, 11);
+            this.leftSideLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.leftSideLabel.Name = "leftSideLabel";
-            this.leftSideLabel.Size = new System.Drawing.Size(145, 40);
+            this.leftSideLabel.Size = new System.Drawing.Size(119, 33);
             this.leftSideLabel.TabIndex = 2;
             this.leftSideLabel.Text = "Levá strana";
             // 
@@ -163,10 +168,10 @@
             // 
             this.rightSideLabel.AutoSize = true;
             this.rightSideLabel.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideLabel.Location = new System.Drawing.Point(7, 160);
-            this.rightSideLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.rightSideLabel.Location = new System.Drawing.Point(8, 175);
+            this.rightSideLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.rightSideLabel.Name = "rightSideLabel";
-            this.rightSideLabel.Size = new System.Drawing.Size(165, 41);
+            this.rightSideLabel.Size = new System.Drawing.Size(129, 33);
             this.rightSideLabel.TabIndex = 5;
             this.rightSideLabel.Text = "Pravá strana";
             // 
@@ -174,10 +179,10 @@
             // 
             this.RightSideLengthLabel.AutoSize = true;
             this.RightSideLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.RightSideLengthLabel.Location = new System.Drawing.Point(9, 210);
-            this.RightSideLengthLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.RightSideLengthLabel.Location = new System.Drawing.Point(10, 229);
+            this.RightSideLengthLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RightSideLengthLabel.Name = "RightSideLengthLabel";
-            this.RightSideLengthLabel.Size = new System.Drawing.Size(180, 25);
+            this.RightSideLengthLabel.Size = new System.Drawing.Size(144, 20);
             this.RightSideLengthLabel.TabIndex = 6;
             this.RightSideLengthLabel.Text = "Délka pravé strany:";
             // 
@@ -190,16 +195,21 @@
             0,
             0,
             0});
-            this.rightSideLength.Location = new System.Drawing.Point(13, 240);
-            this.rightSideLength.Margin = new System.Windows.Forms.Padding(7);
+            this.rightSideLength.Location = new System.Drawing.Point(14, 262);
+            this.rightSideLength.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.rightSideLength.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.rightSideLength.Name = "rightSideLength";
-            this.rightSideLength.Size = new System.Drawing.Size(280, 34);
+            this.rightSideLength.Size = new System.Drawing.Size(308, 29);
             this.rightSideLength.TabIndex = 7;
+            this.rightSideLength.Value = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
             // 
             // midSideLength
             // 
@@ -210,25 +220,30 @@
             0,
             0,
             0});
-            this.midSideLength.Location = new System.Drawing.Point(13, 390);
-            this.midSideLength.Margin = new System.Windows.Forms.Padding(7);
+            this.midSideLength.Location = new System.Drawing.Point(14, 425);
+            this.midSideLength.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.midSideLength.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.midSideLength.Name = "midSideLength";
-            this.midSideLength.Size = new System.Drawing.Size(280, 34);
+            this.midSideLength.Size = new System.Drawing.Size(308, 29);
             this.midSideLength.TabIndex = 10;
+            this.midSideLength.Value = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
             // 
             // MidSideLengthLabel
             // 
             this.MidSideLengthLabel.AutoSize = true;
             this.MidSideLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MidSideLengthLabel.Location = new System.Drawing.Point(9, 360);
-            this.MidSideLengthLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.MidSideLengthLabel.Location = new System.Drawing.Point(10, 393);
+            this.MidSideLengthLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.MidSideLengthLabel.Name = "MidSideLengthLabel";
-            this.MidSideLengthLabel.Size = new System.Drawing.Size(217, 25);
+            this.MidSideLengthLabel.Size = new System.Drawing.Size(176, 20);
             this.MidSideLengthLabel.TabIndex = 9;
             this.MidSideLengthLabel.Text = "Délka prostřední strany:";
             // 
@@ -236,9 +251,9 @@
             // 
             this.MidSideLabel.AutoSize = true;
             this.MidSideLabel.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MidSideLabel.Location = new System.Drawing.Point(7, 310);
+            this.MidSideLabel.Location = new System.Drawing.Point(8, 338);
             this.MidSideLabel.Name = "MidSideLabel";
-            this.MidSideLabel.Size = new System.Drawing.Size(217, 41);
+            this.MidSideLabel.Size = new System.Drawing.Size(170, 33);
             this.MidSideLabel.TabIndex = 8;
             this.MidSideLabel.Text = "Prostřední strana";
             // 
@@ -251,16 +266,21 @@
             0,
             0,
             0});
-            this.midSideHeight.Location = new System.Drawing.Point(344, 390);
-            this.midSideHeight.Margin = new System.Windows.Forms.Padding(7);
+            this.midSideHeight.Location = new System.Drawing.Point(378, 425);
+            this.midSideHeight.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.midSideHeight.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.midSideHeight.Name = "midSideHeight";
-            this.midSideHeight.Size = new System.Drawing.Size(280, 34);
+            this.midSideHeight.Size = new System.Drawing.Size(308, 29);
             this.midSideHeight.TabIndex = 11;
+            this.midSideHeight.Value = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
             // 
             // rightSideHeight
             // 
@@ -271,16 +291,21 @@
             0,
             0,
             0});
-            this.rightSideHeight.Location = new System.Drawing.Point(344, 240);
-            this.rightSideHeight.Margin = new System.Windows.Forms.Padding(7);
+            this.rightSideHeight.Location = new System.Drawing.Point(378, 262);
+            this.rightSideHeight.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.rightSideHeight.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.rightSideHeight.Name = "rightSideHeight";
-            this.rightSideHeight.Size = new System.Drawing.Size(280, 34);
+            this.rightSideHeight.Size = new System.Drawing.Size(308, 29);
             this.rightSideHeight.TabIndex = 11;
+            this.rightSideHeight.Value = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
             // 
             // leftSideHeight
             // 
@@ -291,25 +316,30 @@
             0,
             0,
             0});
-            this.leftSideHeight.Location = new System.Drawing.Point(344, 90);
-            this.leftSideHeight.Margin = new System.Windows.Forms.Padding(7);
+            this.leftSideHeight.Location = new System.Drawing.Point(378, 98);
+            this.leftSideHeight.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.leftSideHeight.Maximum = new decimal(new int[] {
             15000,
             0,
             0,
             0});
             this.leftSideHeight.Name = "leftSideHeight";
-            this.leftSideHeight.Size = new System.Drawing.Size(280, 34);
+            this.leftSideHeight.Size = new System.Drawing.Size(308, 29);
             this.leftSideHeight.TabIndex = 11;
+            this.leftSideHeight.Value = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
             // 
             // MidSideHeightLabel
             // 
             this.MidSideHeightLabel.AutoSize = true;
             this.MidSideHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MidSideHeightLabel.Location = new System.Drawing.Point(340, 360);
-            this.MidSideHeightLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.MidSideHeightLabel.Location = new System.Drawing.Point(374, 393);
+            this.MidSideHeightLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.MidSideHeightLabel.Name = "MidSideHeightLabel";
-            this.MidSideHeightLabel.Size = new System.Drawing.Size(222, 25);
+            this.MidSideHeightLabel.Size = new System.Drawing.Size(178, 20);
             this.MidSideHeightLabel.TabIndex = 11;
             this.MidSideHeightLabel.Text = "Výška prostřední strany:";
             // 
@@ -317,10 +347,10 @@
             // 
             this.RightSideHeightLabel.AutoSize = true;
             this.RightSideHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.RightSideHeightLabel.Location = new System.Drawing.Point(340, 210);
-            this.RightSideHeightLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.RightSideHeightLabel.Location = new System.Drawing.Point(374, 229);
+            this.RightSideHeightLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RightSideHeightLabel.Name = "RightSideHeightLabel";
-            this.RightSideHeightLabel.Size = new System.Drawing.Size(185, 25);
+            this.RightSideHeightLabel.Size = new System.Drawing.Size(146, 20);
             this.RightSideHeightLabel.TabIndex = 12;
             this.RightSideHeightLabel.Text = "Výška pravé strany:";
             // 
@@ -328,10 +358,10 @@
             // 
             this.LeftSideHeightLabel.AutoSize = true;
             this.LeftSideHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.LeftSideHeightLabel.Location = new System.Drawing.Point(340, 60);
-            this.LeftSideHeightLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.LeftSideHeightLabel.Location = new System.Drawing.Point(374, 65);
+            this.LeftSideHeightLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.LeftSideHeightLabel.Name = "LeftSideHeightLabel";
-            this.LeftSideHeightLabel.Size = new System.Drawing.Size(172, 25);
+            this.LeftSideHeightLabel.Size = new System.Drawing.Size(135, 20);
             this.LeftSideHeightLabel.TabIndex = 11;
             this.LeftSideHeightLabel.Text = "Výška levé strany:";
             // 
@@ -360,9 +390,9 @@
             this.panel1.Controls.Add(this.RightSideLengthLabel);
             this.panel1.Controls.Add(this.rightSideLabel);
             this.panel1.Controls.Add(this.splitter1);
-            this.panel1.Location = new System.Drawing.Point(12, 51);
+            this.panel1.Location = new System.Drawing.Point(13, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(989, 503);
+            this.panel1.Size = new System.Drawing.Size(1088, 549);
             this.panel1.TabIndex = 12;
             // 
             // midSideDoorComboBox
@@ -376,9 +406,9 @@
             "5(3+2)",
             "6(3+3)",
             "8(4+4)"});
-            this.midSideDoorComboBox.Location = new System.Drawing.Point(674, 388);
+            this.midSideDoorComboBox.Location = new System.Drawing.Point(741, 423);
             this.midSideDoorComboBox.Name = "midSideDoorComboBox";
-            this.midSideDoorComboBox.Size = new System.Drawing.Size(121, 37);
+            this.midSideDoorComboBox.Size = new System.Drawing.Size(133, 32);
             this.midSideDoorComboBox.TabIndex = 21;
             // 
             // rightSideDoorComboBox
@@ -392,14 +422,15 @@
             "5(3+2)",
             "6(3+3)",
             "8(4+4)"});
-            this.rightSideDoorComboBox.Location = new System.Drawing.Point(674, 238);
+            this.rightSideDoorComboBox.Location = new System.Drawing.Point(741, 260);
             this.rightSideDoorComboBox.Name = "rightSideDoorComboBox";
-            this.rightSideDoorComboBox.Size = new System.Drawing.Size(121, 37);
+            this.rightSideDoorComboBox.Size = new System.Drawing.Size(133, 32);
             this.rightSideDoorComboBox.TabIndex = 20;
             // 
             // leftSideDoorComboBox
             // 
             this.leftSideDoorComboBox.FormattingEnabled = true;
+            this.leftSideDoorComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.leftSideDoorComboBox.Items.AddRange(new object[] {
             "2",
             "3",
@@ -408,19 +439,19 @@
             "5(3+2)",
             "6(3+3)",
             "8(4+4)"});
-            this.leftSideDoorComboBox.Location = new System.Drawing.Point(674, 90);
+            this.leftSideDoorComboBox.Location = new System.Drawing.Point(741, 98);
             this.leftSideDoorComboBox.Name = "leftSideDoorComboBox";
-            this.leftSideDoorComboBox.Size = new System.Drawing.Size(121, 37);
+            this.leftSideDoorComboBox.Size = new System.Drawing.Size(133, 32);
             this.leftSideDoorComboBox.TabIndex = 19;
             // 
             // midSideDoorCountLabel
             // 
             this.midSideDoorCountLabel.AutoSize = true;
             this.midSideDoorCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideDoorCountLabel.Location = new System.Drawing.Point(670, 360);
-            this.midSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.midSideDoorCountLabel.Location = new System.Drawing.Point(737, 393);
+            this.midSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.midSideDoorCountLabel.Name = "midSideDoorCountLabel";
-            this.midSideDoorCountLabel.Size = new System.Drawing.Size(201, 25);
+            this.midSideDoorCountLabel.Size = new System.Drawing.Size(162, 20);
             this.midSideDoorCountLabel.TabIndex = 15;
             this.midSideDoorCountLabel.Text = "Počet dveří na středu:";
             // 
@@ -428,10 +459,10 @@
             // 
             this.rightSideDoorCountLabel.AutoSize = true;
             this.rightSideDoorCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideDoorCountLabel.Location = new System.Drawing.Point(670, 210);
-            this.rightSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.rightSideDoorCountLabel.Location = new System.Drawing.Point(737, 229);
+            this.rightSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.rightSideDoorCountLabel.Name = "rightSideDoorCountLabel";
-            this.rightSideDoorCountLabel.Size = new System.Drawing.Size(255, 25);
+            this.rightSideDoorCountLabel.Size = new System.Drawing.Size(205, 20);
             this.rightSideDoorCountLabel.TabIndex = 14;
             this.rightSideDoorCountLabel.Text = "Počet dveří na pravé straně:";
             // 
@@ -439,18 +470,18 @@
             // 
             this.leftSideDoorCountLabel.AutoSize = true;
             this.leftSideDoorCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideDoorCountLabel.Location = new System.Drawing.Point(670, 60);
-            this.leftSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.leftSideDoorCountLabel.Location = new System.Drawing.Point(737, 65);
+            this.leftSideDoorCountLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.leftSideDoorCountLabel.Name = "leftSideDoorCountLabel";
-            this.leftSideDoorCountLabel.Size = new System.Drawing.Size(242, 25);
+            this.leftSideDoorCountLabel.Size = new System.Drawing.Size(194, 20);
             this.leftSideDoorCountLabel.TabIndex = 13;
             this.leftSideDoorCountLabel.Text = "Počet dveří na levé straně:";
             // 
             // splitter2
             // 
-            this.splitter2.Location = new System.Drawing.Point(330, 0);
+            this.splitter2.Location = new System.Drawing.Point(363, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(330, 503);
+            this.splitter2.Size = new System.Drawing.Size(363, 549);
             this.splitter2.TabIndex = 1;
             this.splitter2.TabStop = false;
             // 
@@ -458,15 +489,15 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(330, 503);
+            this.splitter1.Size = new System.Drawing.Size(363, 549);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(25, 530);
+            this.calculateButton.Location = new System.Drawing.Point(14, 611);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(141, 63);
+            this.calculateButton.Size = new System.Drawing.Size(155, 69);
             this.calculateButton.TabIndex = 13;
             this.calculateButton.Text = "Spočítej";
             this.calculateButton.UseVisualStyleBackColor = true;
@@ -524,18 +555,34 @@
             this.panel2.Controls.Add(this.splitter5);
             this.panel2.Controls.Add(this.splitter4);
             this.panel2.Controls.Add(this.splitter3);
-            this.panel2.Location = new System.Drawing.Point(1007, 51);
+            this.panel2.Location = new System.Drawing.Point(1108, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(742, 503);
+            this.panel2.Size = new System.Drawing.Size(816, 549);
             this.panel2.TabIndex = 14;
+            // 
+            // splitter10
+            // 
+            this.splitter10.Location = new System.Drawing.Point(693, 0);
+            this.splitter10.Name = "splitter10";
+            this.splitter10.Size = new System.Drawing.Size(99, 549);
+            this.splitter10.TabIndex = 50;
+            this.splitter10.TabStop = false;
+            // 
+            // splitter9
+            // 
+            this.splitter9.Location = new System.Drawing.Point(594, 0);
+            this.splitter9.Name = "splitter9";
+            this.splitter9.Size = new System.Drawing.Size(99, 549);
+            this.splitter9.TabIndex = 49;
+            this.splitter9.TabStop = false;
             // 
             // midSideVALengthLabel
             // 
             this.midSideVALengthLabel.AutoSize = true;
             this.midSideVALengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideVALengthLabel.Location = new System.Drawing.Point(456, 390);
+            this.midSideVALengthLabel.Location = new System.Drawing.Point(502, 425);
             this.midSideVALengthLabel.Name = "midSideVALengthLabel";
-            this.midSideVALengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.midSideVALengthLabel.Size = new System.Drawing.Size(48, 20);
             this.midSideVALengthLabel.TabIndex = 47;
             this.midSideVALengthLabel.Text = "0 mm";
             // 
@@ -543,9 +590,9 @@
             // 
             this.midSideBSLengthLabel.AutoSize = true;
             this.midSideBSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideBSLengthLabel.Location = new System.Drawing.Point(366, 390);
+            this.midSideBSLengthLabel.Location = new System.Drawing.Point(403, 425);
             this.midSideBSLengthLabel.Name = "midSideBSLengthLabel";
-            this.midSideBSLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.midSideBSLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.midSideBSLengthLabel.TabIndex = 46;
             this.midSideBSLengthLabel.Text = "0 mm";
             // 
@@ -553,9 +600,9 @@
             // 
             this.midSideHSLengthLabel.AutoSize = true;
             this.midSideHSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideHSLengthLabel.Location = new System.Drawing.Point(276, 390);
+            this.midSideHSLengthLabel.Location = new System.Drawing.Point(304, 425);
             this.midSideHSLengthLabel.Name = "midSideHSLengthLabel";
-            this.midSideHSLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.midSideHSLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.midSideHSLengthLabel.TabIndex = 45;
             this.midSideHSLengthLabel.Text = "0 mm";
             // 
@@ -563,9 +610,9 @@
             // 
             this.midSideVMLengthLabel.AutoSize = true;
             this.midSideVMLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideVMLengthLabel.Location = new System.Drawing.Point(186, 390);
+            this.midSideVMLengthLabel.Location = new System.Drawing.Point(205, 425);
             this.midSideVMLengthLabel.Name = "midSideVMLengthLabel";
-            this.midSideVMLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.midSideVMLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.midSideVMLengthLabel.TabIndex = 44;
             this.midSideVMLengthLabel.Text = "0 mm";
             // 
@@ -573,9 +620,9 @@
             // 
             this.midSideVLengthLabel.AutoSize = true;
             this.midSideVLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideVLengthLabel.Location = new System.Drawing.Point(96, 390);
+            this.midSideVLengthLabel.Location = new System.Drawing.Point(106, 425);
             this.midSideVLengthLabel.Name = "midSideVLengthLabel";
-            this.midSideVLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.midSideVLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.midSideVLengthLabel.TabIndex = 43;
             this.midSideVLengthLabel.Text = "0 mm";
             // 
@@ -583,9 +630,9 @@
             // 
             this.midSideHLLengthLabel.AutoSize = true;
             this.midSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideHLLengthLabel.Location = new System.Drawing.Point(3, 390);
+            this.midSideHLLengthLabel.Location = new System.Drawing.Point(3, 425);
             this.midSideHLLengthLabel.Name = "midSideHLLengthLabel";
-            this.midSideHLLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.midSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.midSideHLLengthLabel.TabIndex = 42;
             this.midSideHLLengthLabel.Text = "0 mm";
             // 
@@ -593,9 +640,9 @@
             // 
             this.rightSideVALengthLabel.AutoSize = true;
             this.rightSideVALengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideVALengthLabel.Location = new System.Drawing.Point(456, 240);
+            this.rightSideVALengthLabel.Location = new System.Drawing.Point(502, 262);
             this.rightSideVALengthLabel.Name = "rightSideVALengthLabel";
-            this.rightSideVALengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.rightSideVALengthLabel.Size = new System.Drawing.Size(48, 20);
             this.rightSideVALengthLabel.TabIndex = 41;
             this.rightSideVALengthLabel.Text = "0 mm";
             // 
@@ -603,9 +650,9 @@
             // 
             this.rightSideBSLengthLabel.AutoSize = true;
             this.rightSideBSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideBSLengthLabel.Location = new System.Drawing.Point(366, 240);
+            this.rightSideBSLengthLabel.Location = new System.Drawing.Point(403, 262);
             this.rightSideBSLengthLabel.Name = "rightSideBSLengthLabel";
-            this.rightSideBSLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.rightSideBSLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.rightSideBSLengthLabel.TabIndex = 40;
             this.rightSideBSLengthLabel.Text = "0 mm";
             // 
@@ -613,9 +660,9 @@
             // 
             this.rightSideHSLengthLabel.AutoSize = true;
             this.rightSideHSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideHSLengthLabel.Location = new System.Drawing.Point(276, 240);
+            this.rightSideHSLengthLabel.Location = new System.Drawing.Point(304, 262);
             this.rightSideHSLengthLabel.Name = "rightSideHSLengthLabel";
-            this.rightSideHSLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.rightSideHSLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.rightSideHSLengthLabel.TabIndex = 39;
             this.rightSideHSLengthLabel.Text = "0 mm";
             // 
@@ -623,9 +670,9 @@
             // 
             this.rightSideVMLengthLabel.AutoSize = true;
             this.rightSideVMLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideVMLengthLabel.Location = new System.Drawing.Point(186, 240);
+            this.rightSideVMLengthLabel.Location = new System.Drawing.Point(205, 262);
             this.rightSideVMLengthLabel.Name = "rightSideVMLengthLabel";
-            this.rightSideVMLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.rightSideVMLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.rightSideVMLengthLabel.TabIndex = 38;
             this.rightSideVMLengthLabel.Text = "0 mm";
             // 
@@ -633,9 +680,9 @@
             // 
             this.rightSideVLengthLabel.AutoSize = true;
             this.rightSideVLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideVLengthLabel.Location = new System.Drawing.Point(96, 240);
+            this.rightSideVLengthLabel.Location = new System.Drawing.Point(106, 262);
             this.rightSideVLengthLabel.Name = "rightSideVLengthLabel";
-            this.rightSideVLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.rightSideVLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.rightSideVLengthLabel.TabIndex = 37;
             this.rightSideVLengthLabel.Text = "0 mm";
             // 
@@ -643,9 +690,9 @@
             // 
             this.rightSideHLLengthLabel.AutoSize = true;
             this.rightSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideHLLengthLabel.Location = new System.Drawing.Point(3, 240);
+            this.rightSideHLLengthLabel.Location = new System.Drawing.Point(3, 262);
             this.rightSideHLLengthLabel.Name = "rightSideHLLengthLabel";
-            this.rightSideHLLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.rightSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.rightSideHLLengthLabel.TabIndex = 36;
             this.rightSideHLLengthLabel.Text = "0 mm";
             // 
@@ -653,9 +700,9 @@
             // 
             this.midSideVACountLabel.AutoSize = true;
             this.midSideVACountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideVACountLabel.Location = new System.Drawing.Point(456, 360);
+            this.midSideVACountLabel.Location = new System.Drawing.Point(502, 393);
             this.midSideVACountLabel.Name = "midSideVACountLabel";
-            this.midSideVACountLabel.Size = new System.Drawing.Size(48, 25);
+            this.midSideVACountLabel.Size = new System.Drawing.Size(38, 20);
             this.midSideVACountLabel.TabIndex = 35;
             this.midSideVACountLabel.Text = "0 ks";
             // 
@@ -663,9 +710,9 @@
             // 
             this.midSideBSCountLabel.AutoSize = true;
             this.midSideBSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideBSCountLabel.Location = new System.Drawing.Point(366, 360);
+            this.midSideBSCountLabel.Location = new System.Drawing.Point(403, 393);
             this.midSideBSCountLabel.Name = "midSideBSCountLabel";
-            this.midSideBSCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.midSideBSCountLabel.Size = new System.Drawing.Size(38, 20);
             this.midSideBSCountLabel.TabIndex = 34;
             this.midSideBSCountLabel.Text = "0 ks";
             // 
@@ -673,9 +720,9 @@
             // 
             this.midSideHSCountLabel.AutoSize = true;
             this.midSideHSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideHSCountLabel.Location = new System.Drawing.Point(276, 360);
+            this.midSideHSCountLabel.Location = new System.Drawing.Point(304, 393);
             this.midSideHSCountLabel.Name = "midSideHSCountLabel";
-            this.midSideHSCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.midSideHSCountLabel.Size = new System.Drawing.Size(38, 20);
             this.midSideHSCountLabel.TabIndex = 33;
             this.midSideHSCountLabel.Text = "0 ks";
             // 
@@ -683,9 +730,9 @@
             // 
             this.midSideVMCountLabel.AutoSize = true;
             this.midSideVMCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideVMCountLabel.Location = new System.Drawing.Point(186, 360);
+            this.midSideVMCountLabel.Location = new System.Drawing.Point(205, 393);
             this.midSideVMCountLabel.Name = "midSideVMCountLabel";
-            this.midSideVMCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.midSideVMCountLabel.Size = new System.Drawing.Size(38, 20);
             this.midSideVMCountLabel.TabIndex = 32;
             this.midSideVMCountLabel.Text = "0 ks";
             // 
@@ -693,9 +740,9 @@
             // 
             this.midSideVCountLabel.AutoSize = true;
             this.midSideVCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideVCountLabel.Location = new System.Drawing.Point(96, 360);
+            this.midSideVCountLabel.Location = new System.Drawing.Point(106, 393);
             this.midSideVCountLabel.Name = "midSideVCountLabel";
-            this.midSideVCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.midSideVCountLabel.Size = new System.Drawing.Size(38, 20);
             this.midSideVCountLabel.TabIndex = 31;
             this.midSideVCountLabel.Text = "0 ks";
             // 
@@ -703,9 +750,9 @@
             // 
             this.midSideHLCountLabel.AutoSize = true;
             this.midSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.midSideHLCountLabel.Location = new System.Drawing.Point(3, 360);
+            this.midSideHLCountLabel.Location = new System.Drawing.Point(3, 393);
             this.midSideHLCountLabel.Name = "midSideHLCountLabel";
-            this.midSideHLCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.midSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
             this.midSideHLCountLabel.TabIndex = 30;
             this.midSideHLCountLabel.Text = "0 ks";
             // 
@@ -713,9 +760,9 @@
             // 
             this.rightSideVACountLabel.AutoSize = true;
             this.rightSideVACountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideVACountLabel.Location = new System.Drawing.Point(456, 210);
+            this.rightSideVACountLabel.Location = new System.Drawing.Point(502, 229);
             this.rightSideVACountLabel.Name = "rightSideVACountLabel";
-            this.rightSideVACountLabel.Size = new System.Drawing.Size(48, 25);
+            this.rightSideVACountLabel.Size = new System.Drawing.Size(38, 20);
             this.rightSideVACountLabel.TabIndex = 29;
             this.rightSideVACountLabel.Text = "0 ks";
             // 
@@ -723,9 +770,9 @@
             // 
             this.rightSideBSCountLabel.AutoSize = true;
             this.rightSideBSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideBSCountLabel.Location = new System.Drawing.Point(366, 210);
+            this.rightSideBSCountLabel.Location = new System.Drawing.Point(403, 229);
             this.rightSideBSCountLabel.Name = "rightSideBSCountLabel";
-            this.rightSideBSCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.rightSideBSCountLabel.Size = new System.Drawing.Size(38, 20);
             this.rightSideBSCountLabel.TabIndex = 28;
             this.rightSideBSCountLabel.Text = "0 ks";
             // 
@@ -733,9 +780,9 @@
             // 
             this.rightSideHSCountLabel.AutoSize = true;
             this.rightSideHSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideHSCountLabel.Location = new System.Drawing.Point(276, 210);
+            this.rightSideHSCountLabel.Location = new System.Drawing.Point(304, 229);
             this.rightSideHSCountLabel.Name = "rightSideHSCountLabel";
-            this.rightSideHSCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.rightSideHSCountLabel.Size = new System.Drawing.Size(38, 20);
             this.rightSideHSCountLabel.TabIndex = 27;
             this.rightSideHSCountLabel.Text = "0 ks";
             // 
@@ -743,9 +790,9 @@
             // 
             this.rightSideVMCountLabel.AutoSize = true;
             this.rightSideVMCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideVMCountLabel.Location = new System.Drawing.Point(186, 210);
+            this.rightSideVMCountLabel.Location = new System.Drawing.Point(205, 229);
             this.rightSideVMCountLabel.Name = "rightSideVMCountLabel";
-            this.rightSideVMCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.rightSideVMCountLabel.Size = new System.Drawing.Size(38, 20);
             this.rightSideVMCountLabel.TabIndex = 26;
             this.rightSideVMCountLabel.Text = "0 ks";
             // 
@@ -753,9 +800,9 @@
             // 
             this.rightSideVCountLabel.AutoSize = true;
             this.rightSideVCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideVCountLabel.Location = new System.Drawing.Point(96, 210);
+            this.rightSideVCountLabel.Location = new System.Drawing.Point(106, 229);
             this.rightSideVCountLabel.Name = "rightSideVCountLabel";
-            this.rightSideVCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.rightSideVCountLabel.Size = new System.Drawing.Size(38, 20);
             this.rightSideVCountLabel.TabIndex = 25;
             this.rightSideVCountLabel.Text = "0 ks";
             // 
@@ -763,9 +810,9 @@
             // 
             this.rightSideHLCountLabel.AutoSize = true;
             this.rightSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rightSideHLCountLabel.Location = new System.Drawing.Point(3, 210);
+            this.rightSideHLCountLabel.Location = new System.Drawing.Point(3, 229);
             this.rightSideHLCountLabel.Name = "rightSideHLCountLabel";
-            this.rightSideHLCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.rightSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
             this.rightSideHLCountLabel.TabIndex = 24;
             this.rightSideHLCountLabel.Text = "0 ks";
             // 
@@ -773,9 +820,9 @@
             // 
             this.leftSideVALengthLabel.AutoSize = true;
             this.leftSideVALengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVALengthLabel.Location = new System.Drawing.Point(456, 87);
+            this.leftSideVALengthLabel.Location = new System.Drawing.Point(502, 95);
             this.leftSideVALengthLabel.Name = "leftSideVALengthLabel";
-            this.leftSideVALengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.leftSideVALengthLabel.Size = new System.Drawing.Size(48, 20);
             this.leftSideVALengthLabel.TabIndex = 23;
             this.leftSideVALengthLabel.Text = "0 mm";
             // 
@@ -783,9 +830,9 @@
             // 
             this.leftSideBSLengthLabel.AutoSize = true;
             this.leftSideBSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideBSLengthLabel.Location = new System.Drawing.Point(366, 87);
+            this.leftSideBSLengthLabel.Location = new System.Drawing.Point(403, 95);
             this.leftSideBSLengthLabel.Name = "leftSideBSLengthLabel";
-            this.leftSideBSLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.leftSideBSLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.leftSideBSLengthLabel.TabIndex = 22;
             this.leftSideBSLengthLabel.Text = "0 mm";
             // 
@@ -793,9 +840,9 @@
             // 
             this.leftSideHSLengthLabel.AutoSize = true;
             this.leftSideHSLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHSLengthLabel.Location = new System.Drawing.Point(276, 87);
+            this.leftSideHSLengthLabel.Location = new System.Drawing.Point(304, 95);
             this.leftSideHSLengthLabel.Name = "leftSideHSLengthLabel";
-            this.leftSideHSLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.leftSideHSLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.leftSideHSLengthLabel.TabIndex = 21;
             this.leftSideHSLengthLabel.Text = "0 mm";
             // 
@@ -803,9 +850,9 @@
             // 
             this.leftSideVMLengthLabel.AutoSize = true;
             this.leftSideVMLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVMLengthLabel.Location = new System.Drawing.Point(186, 87);
+            this.leftSideVMLengthLabel.Location = new System.Drawing.Point(205, 95);
             this.leftSideVMLengthLabel.Name = "leftSideVMLengthLabel";
-            this.leftSideVMLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.leftSideVMLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.leftSideVMLengthLabel.TabIndex = 20;
             this.leftSideVMLengthLabel.Text = "0 mm";
             // 
@@ -813,9 +860,9 @@
             // 
             this.leftSideVLengthLabel.AutoSize = true;
             this.leftSideVLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVLengthLabel.Location = new System.Drawing.Point(96, 87);
+            this.leftSideVLengthLabel.Location = new System.Drawing.Point(106, 95);
             this.leftSideVLengthLabel.Name = "leftSideVLengthLabel";
-            this.leftSideVLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.leftSideVLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.leftSideVLengthLabel.TabIndex = 19;
             this.leftSideVLengthLabel.Text = "0 mm";
             // 
@@ -823,9 +870,9 @@
             // 
             this.leftSideHLLengthLabel.AutoSize = true;
             this.leftSideHLLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHLLengthLabel.Location = new System.Drawing.Point(3, 87);
+            this.leftSideHLLengthLabel.Location = new System.Drawing.Point(3, 95);
             this.leftSideHLLengthLabel.Name = "leftSideHLLengthLabel";
-            this.leftSideHLLengthLabel.Size = new System.Drawing.Size(60, 25);
+            this.leftSideHLLengthLabel.Size = new System.Drawing.Size(48, 20);
             this.leftSideHLLengthLabel.TabIndex = 18;
             this.leftSideHLLengthLabel.Text = "0 mm";
             // 
@@ -833,9 +880,9 @@
             // 
             this.leftSideVACountLabel.AutoSize = true;
             this.leftSideVACountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVACountLabel.Location = new System.Drawing.Point(456, 56);
+            this.leftSideVACountLabel.Location = new System.Drawing.Point(502, 61);
             this.leftSideVACountLabel.Name = "leftSideVACountLabel";
-            this.leftSideVACountLabel.Size = new System.Drawing.Size(48, 25);
+            this.leftSideVACountLabel.Size = new System.Drawing.Size(38, 20);
             this.leftSideVACountLabel.TabIndex = 17;
             this.leftSideVACountLabel.Text = "0 ks";
             // 
@@ -843,9 +890,9 @@
             // 
             this.leftSideBSCountLabel.AutoSize = true;
             this.leftSideBSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideBSCountLabel.Location = new System.Drawing.Point(366, 56);
+            this.leftSideBSCountLabel.Location = new System.Drawing.Point(403, 61);
             this.leftSideBSCountLabel.Name = "leftSideBSCountLabel";
-            this.leftSideBSCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.leftSideBSCountLabel.Size = new System.Drawing.Size(38, 20);
             this.leftSideBSCountLabel.TabIndex = 16;
             this.leftSideBSCountLabel.Text = "0 ks";
             // 
@@ -853,9 +900,9 @@
             // 
             this.leftSideHSCountLabel.AutoSize = true;
             this.leftSideHSCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHSCountLabel.Location = new System.Drawing.Point(276, 56);
+            this.leftSideHSCountLabel.Location = new System.Drawing.Point(304, 61);
             this.leftSideHSCountLabel.Name = "leftSideHSCountLabel";
-            this.leftSideHSCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.leftSideHSCountLabel.Size = new System.Drawing.Size(38, 20);
             this.leftSideHSCountLabel.TabIndex = 15;
             this.leftSideHSCountLabel.Text = "0 ks";
             // 
@@ -863,9 +910,9 @@
             // 
             this.leftSideVMCountLabel.AutoSize = true;
             this.leftSideVMCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVMCountLabel.Location = new System.Drawing.Point(186, 56);
+            this.leftSideVMCountLabel.Location = new System.Drawing.Point(205, 61);
             this.leftSideVMCountLabel.Name = "leftSideVMCountLabel";
-            this.leftSideVMCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.leftSideVMCountLabel.Size = new System.Drawing.Size(38, 20);
             this.leftSideVMCountLabel.TabIndex = 14;
             this.leftSideVMCountLabel.Text = "0 ks";
             // 
@@ -873,9 +920,9 @@
             // 
             this.leftSideVCountLabel.AutoSize = true;
             this.leftSideVCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideVCountLabel.Location = new System.Drawing.Point(96, 56);
+            this.leftSideVCountLabel.Location = new System.Drawing.Point(106, 61);
             this.leftSideVCountLabel.Name = "leftSideVCountLabel";
-            this.leftSideVCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.leftSideVCountLabel.Size = new System.Drawing.Size(38, 20);
             this.leftSideVCountLabel.TabIndex = 13;
             this.leftSideVCountLabel.Text = "0 ks";
             // 
@@ -883,9 +930,9 @@
             // 
             this.leftSideHLCountLabel.AutoSize = true;
             this.leftSideHLCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHLCountLabel.Location = new System.Drawing.Point(3, 56);
+            this.leftSideHLCountLabel.Location = new System.Drawing.Point(3, 61);
             this.leftSideHLCountLabel.Name = "leftSideHLCountLabel";
-            this.leftSideHLCountLabel.Size = new System.Drawing.Size(48, 25);
+            this.leftSideHLCountLabel.Size = new System.Drawing.Size(38, 20);
             this.leftSideHLCountLabel.TabIndex = 12;
             this.leftSideHLCountLabel.Text = "0 ks";
             // 
@@ -893,9 +940,9 @@
             // 
             this.VALabel.AutoSize = true;
             this.VALabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.VALabel.Location = new System.Drawing.Point(456, 10);
+            this.VALabel.Location = new System.Drawing.Point(502, 11);
             this.VALabel.Name = "VALabel";
-            this.VALabel.Size = new System.Drawing.Size(45, 29);
+            this.VALabel.Size = new System.Drawing.Size(38, 24);
             this.VALabel.TabIndex = 11;
             this.VALabel.Text = "VA";
             // 
@@ -903,9 +950,9 @@
             // 
             this.BSLabel.AutoSize = true;
             this.BSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.BSLabel.Location = new System.Drawing.Point(366, 10);
+            this.BSLabel.Location = new System.Drawing.Point(403, 11);
             this.BSLabel.Name = "BSLabel";
-            this.BSLabel.Size = new System.Drawing.Size(47, 29);
+            this.BSLabel.Size = new System.Drawing.Size(36, 24);
             this.BSLabel.TabIndex = 10;
             this.BSLabel.Text = "BS";
             // 
@@ -913,9 +960,9 @@
             // 
             this.HSLabel.AutoSize = true;
             this.HSLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.HSLabel.Location = new System.Drawing.Point(276, 10);
+            this.HSLabel.Location = new System.Drawing.Point(304, 11);
             this.HSLabel.Name = "HSLabel";
-            this.HSLabel.Size = new System.Drawing.Size(48, 29);
+            this.HSLabel.Size = new System.Drawing.Size(38, 24);
             this.HSLabel.TabIndex = 9;
             this.HSLabel.Text = "HS";
             // 
@@ -923,9 +970,9 @@
             // 
             this.VMLabel.AutoSize = true;
             this.VMLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.VMLabel.Location = new System.Drawing.Point(186, 10);
+            this.VMLabel.Location = new System.Drawing.Point(205, 11);
             this.VMLabel.Name = "VMLabel";
-            this.VMLabel.Size = new System.Drawing.Size(50, 29);
+            this.VMLabel.Size = new System.Drawing.Size(41, 24);
             this.VMLabel.TabIndex = 8;
             this.VMLabel.Text = "VM";
             // 
@@ -933,9 +980,9 @@
             // 
             this.VLabel.AutoSize = true;
             this.VLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.VLabel.Location = new System.Drawing.Point(96, 10);
+            this.VLabel.Location = new System.Drawing.Point(106, 11);
             this.VLabel.Name = "VLabel";
-            this.VLabel.Size = new System.Drawing.Size(29, 29);
+            this.VLabel.Size = new System.Drawing.Size(24, 24);
             this.VLabel.TabIndex = 7;
             this.VLabel.Text = "V";
             // 
@@ -943,49 +990,49 @@
             // 
             this.leftSideHL.AutoSize = true;
             this.leftSideHL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.leftSideHL.Location = new System.Drawing.Point(3, 10);
+            this.leftSideHL.Location = new System.Drawing.Point(3, 11);
             this.leftSideHL.Name = "leftSideHL";
-            this.leftSideHL.Size = new System.Drawing.Size(45, 29);
+            this.leftSideHL.Size = new System.Drawing.Size(36, 24);
             this.leftSideHL.TabIndex = 6;
             this.leftSideHL.Text = "HL";
             // 
             // splitter8
             // 
-            this.splitter8.Location = new System.Drawing.Point(450, 0);
+            this.splitter8.Location = new System.Drawing.Point(495, 0);
             this.splitter8.Name = "splitter8";
-            this.splitter8.Size = new System.Drawing.Size(90, 503);
+            this.splitter8.Size = new System.Drawing.Size(99, 549);
             this.splitter8.TabIndex = 5;
             this.splitter8.TabStop = false;
             // 
             // splitter7
             // 
-            this.splitter7.Location = new System.Drawing.Point(360, 0);
+            this.splitter7.Location = new System.Drawing.Point(396, 0);
             this.splitter7.Name = "splitter7";
-            this.splitter7.Size = new System.Drawing.Size(90, 503);
+            this.splitter7.Size = new System.Drawing.Size(99, 549);
             this.splitter7.TabIndex = 4;
             this.splitter7.TabStop = false;
             // 
             // splitter6
             // 
-            this.splitter6.Location = new System.Drawing.Point(270, 0);
+            this.splitter6.Location = new System.Drawing.Point(297, 0);
             this.splitter6.Name = "splitter6";
-            this.splitter6.Size = new System.Drawing.Size(90, 503);
+            this.splitter6.Size = new System.Drawing.Size(99, 549);
             this.splitter6.TabIndex = 3;
             this.splitter6.TabStop = false;
             // 
             // splitter5
             // 
-            this.splitter5.Location = new System.Drawing.Point(180, 0);
+            this.splitter5.Location = new System.Drawing.Point(198, 0);
             this.splitter5.Name = "splitter5";
-            this.splitter5.Size = new System.Drawing.Size(90, 503);
+            this.splitter5.Size = new System.Drawing.Size(99, 549);
             this.splitter5.TabIndex = 2;
             this.splitter5.TabStop = false;
             // 
             // splitter4
             // 
-            this.splitter4.Location = new System.Drawing.Point(90, 0);
+            this.splitter4.Location = new System.Drawing.Point(99, 0);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(90, 503);
+            this.splitter4.Size = new System.Drawing.Size(99, 549);
             this.splitter4.TabIndex = 1;
             this.splitter4.TabStop = false;
             // 
@@ -993,7 +1040,7 @@
             // 
             this.splitter3.Location = new System.Drawing.Point(0, 0);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(90, 503);
+            this.splitter3.Size = new System.Drawing.Size(99, 549);
             this.splitter3.TabIndex = 0;
             this.splitter3.TabStop = false;
             // 
@@ -1001,32 +1048,16 @@
             // 
             this.leftDoorCountErrorProvider.ContainerControl = this;
             // 
-            // splitter9
-            // 
-            this.splitter9.Location = new System.Drawing.Point(540, 0);
-            this.splitter9.Name = "splitter9";
-            this.splitter9.Size = new System.Drawing.Size(90, 503);
-            this.splitter9.TabIndex = 49;
-            this.splitter9.TabStop = false;
-            // 
-            // splitter10
-            // 
-            this.splitter10.Location = new System.Drawing.Point(630, 0);
-            this.splitter10.Name = "splitter10";
-            this.splitter10.Size = new System.Drawing.Size(90, 503);
-            this.splitter10.TabIndex = 50;
-            this.splitter10.TabStop = false;
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1816, 753);
+            this.ClientSize = new System.Drawing.Size(1998, 821);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "Form1";
             this.Text = "Kalkulátor zimní zahrady";
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).EndInit();
