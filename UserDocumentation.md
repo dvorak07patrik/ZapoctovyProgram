@@ -10,7 +10,8 @@
 3) Launch:
    To launch the program simply open ZPProgram/bin/Debug/ZPProgram.exe
 
-4) User Interference overview
+4) User Interference overview:
+
    Upon launching ZPProgram, you will be greeted with the main user interface containing input fields and button. The interface consists of
    the following elements:
 
@@ -18,19 +19,21 @@
    2. Dropdown menu to select the number of doors of each side of the winter garden.
    3. "Spočítej" button to trigger the calculation.
 
-5) Using the calculator
+5) Using the calculator:
    1. Input the dimensions of each side of the winter garden in the provided input fields (if you dont need that side write 0 to Height or Length field)
       Length and Height are in milimeters
    2. Select the desired number of doors from the dropdown menu.
    3. Click the "Spočítej" button to perform the calculations.
 
-6) Viewing the Result
+6) Viewing the Result:
+
    After the button click new window will pop-up. The window shows you visualization of components for each winter garden side with their details.
    First Window also fills the components details.
    If you want to change input dimensions just switch to the first window, change your dimensions and click the button "Spočítej". New window will
    pop-up so you can compare it to the first one and so on.
 
-8) Result did not appear
+8) Result did not appear:
+
    If there is a side missing in a visualization and also first pages component list of that side contains default values there is a problem in
    your input. A little Error will pop-up at yours wrong input so you can fix it.
    Some of the errors could be:
