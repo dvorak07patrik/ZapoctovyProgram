@@ -37,6 +37,6 @@
    If there is a side missing in a visualization and also first pages component list of that side contains default values there is a problem in
    your input. A little Error will pop-up at yours wrong input so you can fix it.
    Some of the errors could be:
-                                 1) The height value is too low.
-                                 2) The value for number of doors is invalid! Choose value from dropdown menu.
-                                 3) The length value is too large for chosen number of doors.
+      1) The height value is too low.
+      2) The value for number of doors is invalid! Choose value from dropdown menu.
+      3) The length value is too large for chosen number of doors.
