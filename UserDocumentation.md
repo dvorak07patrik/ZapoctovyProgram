@@ -3,9 +3,9 @@
    This user guide will walk you through the installation process, using the calculator, and viewing the visualization.
    
 2) System Requirements:
-   Operating System: Windows (10, 11)
-   .NET Framework 7 or later
-   Graphics Card and Monitor that support a minimum resolution of 1920x1080
+   1. Operating System: Windows (10, 11)
+   2. .NET Framework 4.7.2 or later
+   3. Graphics Card and Monitor that support a minimum resolution of 1920x1080
 
 3) Launch:
    To launch the program simply open ZPProgram/bin/Debug/ZPProgram.exe
@@ -13,6 +13,7 @@
 4) User Interference overview
    Upon launching ZPProgram, you will be greeted with the main user interface containing input fields and button. The interface consists of
    the following elements:
+
    1. Input fields for specifying the dimensions of each side of the winter garden.
    2. Dropdown menu to select the number of doors of each side of the winter garden.
    3. "Spočítej" button to trigger the calculation.
