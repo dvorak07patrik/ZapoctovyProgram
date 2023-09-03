@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,110 +37,86 @@ namespace ZPProgram
 
             // checking if user inputs are valid and if they are not making the side null to not be more calculated or painted and showing error
             // ----------------------------------------------------------------------------
-            if (leftSide.length / leftSide.numberOfDoors > 2000 || leftSide.length / leftSide.numberOfDoors < 500 || leftSide.height < 500 || leftSide.height > 3500 || leftSideDoorComboBox.SelectedIndex == -1)
-            {
-                if (leftSide.length / leftSide.numberOfDoors > 2000)
-                {
-                    leftSideErrorProvider.SetError(leftSideLength, "Tato hodnota je pro zvolený počet dveří příliš vysoká!");
-                }
-                if (leftSide.length / leftSide.numberOfDoors < 500)
-                {
-                    leftSideErrorProvider.SetError(leftSideLength, "Tato hodnota je pro zvolený počet dveří příliš nízká!");
-                }
-                if (leftSide.height < 500)
-                {
-                    leftSideErrorProvider.SetError(leftSideHeight, "Tato hodnota je příliš nízká!");
-                }
-                if (leftSide.height > 3500)
-                {
-                    leftSideErrorProvider.SetError(leftSideHeight, "Tato hodnota je příliš vysoká!");
-                }
-                if (leftSideDoorComboBox.SelectedIndex == -1)
-                {
-                    leftSideErrorProvider.SetError(leftSideDoorComboBox, "Tato hodnota je neplatná! Vyberte prosím jednu z variant.");
-                }
-                leftSide = null;
-            }
-
-            else 
+            // for left side
+            if (tryIt(leftSideErrorProvider, leftSideLength, leftSideHeight, leftSide, leftSideDoorComboBox) == true)
             {
                 var leftSideParstValues = leftSide.CountParts();
                 showLeftSideOutputLabels(leftSide, leftSideParstValues);
-                leftSideErrorProvider.SetError(leftSideLength, null);
-                leftSideErrorProvider.SetError(leftSideHeight, null);
-                leftSideErrorProvider.SetError(leftSideDoorComboBox, null);
-            }
-
-            if (rightSide.length / rightSide.numberOfDoors > 2000 || rightSide.length / rightSide.numberOfDoors < 500 || rightSide.height < 500 || rightSide.height > 3500 || rightSideDoorComboBox.SelectedIndex == -1)
-            {
-                if (rightSide.length / rightSide.numberOfDoors > 2000)
-                {
-                    rightSideErrorProvider.SetError(rightSideLength, "Tato hodnota je pro zvolený počet dveří příliš vysoká!");
-                }
-                if (rightSide.length / rightSide.numberOfDoors < 500)
-                {
-                    rightSideErrorProvider.SetError(rightSideLength, "Tato hodnota je pro zvolený počet dveří příliš nízká!");
-                }
-                if (rightSide.height < 500)
-                {
-                    rightSideErrorProvider.SetError(rightSideHeight, "Tato hodnota je příliš nízká!");
-                }
-                if (rightSide.height > 3500)
-                {
-                    rightSideErrorProvider.SetError(rightSideHeight, "Tato hodnota je příliš vysoká!");
-                }
-                if (rightSideDoorComboBox.SelectedIndex == -1)
-                {
-                    rightSideErrorProvider.SetError(rightSideDoorComboBox, "Tato hodnota je neplatná! Vyberte prosím jednu z variant.");
-                }
-                rightSide = null;
             }
             else
+            {
+                leftSide = null;
+            }
+
+            // for right side
+            if (tryIt(rightSideErrorProvider, rightSideLength, rightSideHeight, rightSide, rightSideDoorComboBox) == true)
             {
                 var rightSideParstValues = rightSide.CountParts();
                 showRightSideOutputLabels(rightSide, rightSideParstValues);
-                rightSideErrorProvider.SetError(rightSideLength, null);
-                rightSideErrorProvider.SetError(rightSideHeight, null);
-                rightSideErrorProvider.SetError(rightSideDoorComboBox, null);
-            }
-
-            if (midSide.length / midSide.numberOfDoors > 2000 || midSide.length / midSide.numberOfDoors < 500 || midSide.height < 500 || midSide.height > 3500 || midSideDoorComboBox.SelectedIndex == -1)
-            {
-                if (midSide.length / midSide.numberOfDoors > 2000)
-                {
-                    midSideErrorProvider.SetError(midSideLength, "Tato hodnota je pro zvolený počet dveří příliš vysoká!");
-                }
-                if (midSide.length / midSide.numberOfDoors < 500)
-                {
-                    midSideErrorProvider.SetError(midSideLength, "Tato hodnota je pro zvolený počet dveří příliš nízká!");
-                }
-                if (midSide.height < 500)
-                {
-                    midSideErrorProvider.SetError(midSideHeight, "Tato hodnota je příliš nízká!");
-                }
-                if (midSide.height > 3500)
-                {
-                    midSideErrorProvider.SetError(midSideHeight, "Tato hodnota je příliš vysoká!");
-                }
-                if (midSideDoorComboBox.SelectedIndex == -1)
-                {
-                    midSideErrorProvider.SetError(midSideDoorComboBox, "Tato hodnota je neplatná! Vyberte prosím jednu z variant.");
-                }
-                midSide = null;
             }
             else
             {
+                rightSide = null;
+            }
+
+            // for mid side
+            if (tryIt(midSideErrorProvider, midSideLength, midSideHeight, midSide, midSideDoorComboBox) == true)
+            {
                 var midSideParstValues = midSide.CountParts();
                 showMidSideOutputLabels(midSide, midSideParstValues);
-                midSideErrorProvider.SetError(midSideLength, null);
-                midSideErrorProvider.SetError(midSideHeight, null);
-                midSideErrorProvider.SetError(midSideDoorComboBox, null);
+            }
+            else
+            {
+                midSide = null;
             }
             // --------------------------------------------------------------------------
+
 
             // creating and showing new Form for visualization of sides
             Form2 form2 = new Form2(leftSide, rightSide, midSide);
             form2.Show();
+        }
+
+        // else if not used to show all of the errors
+        private bool tryIt(ErrorProvider sideErrorProvider, NumericUpDown sideLength, NumericUpDown sideHeight, Side side, System.Windows.Forms.ComboBox sideDoorComboBox)
+        {
+            bool check = true; 
+            if (side.length / side.numberOfDoors > 2000)
+            {
+                sideErrorProvider.SetError(sideLength, "Tato hodnota je pro zvolený počet dveří příliš vysoká!");
+                check = false;
+            }
+            if (side.length / side.numberOfDoors < 500)
+            {
+                sideErrorProvider.SetError(sideLength, "Tato hodnota je pro zvolený počet dveří příliš nízká!");
+                check = false;
+            }
+            if (side.height < 500)
+            {
+                sideErrorProvider.SetError(sideHeight, "Tato hodnota je příliš nízká!");
+                check = false;
+            }
+            if (side.height > 3500)
+            {
+                sideErrorProvider.SetError(sideHeight, "Tato hodnota je příliš vysoká!");
+                check = false;
+            }
+            if (sideDoorComboBox.SelectedIndex == -1)
+            {
+                sideErrorProvider.SetError(sideDoorComboBox, "Tato hodnota je neplatná! Vyberte prosím jednu z variant.");
+                check = false;
+            }
+            if (check == false)
+            {
+                return check;
+            }
+            else
+            {
+                sideErrorProvider.SetError(sideLength, null);
+                sideErrorProvider.SetError(sideHeight, null);
+                sideErrorProvider.SetError(sideDoorComboBox, null);
+                return check;
+            }
         }
 
         // functions for showing outputs of calculating side parts values

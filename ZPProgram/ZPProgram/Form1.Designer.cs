@@ -61,7 +61,7 @@
             this.midSideGlassHeightLabel = new System.Windows.Forms.Label();
             this.rightSideGlassHeightLabel = new System.Windows.Forms.Label();
             this.leftSideGlassHeightLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.glassLabel = new System.Windows.Forms.Label();
             this.splitter9 = new System.Windows.Forms.Splitter();
             this.midSideVALengthLabel = new System.Windows.Forms.Label();
             this.midSideBSLengthLabel = new System.Windows.Forms.Label();
@@ -489,6 +489,7 @@
             // 
             // splitter2
             // 
+            this.splitter2.Enabled = false;
             this.splitter2.Location = new System.Drawing.Point(240, 0);
             this.splitter2.Name = "splitter2";
             this.splitter2.Size = new System.Drawing.Size(240, 496);
@@ -497,6 +498,7 @@
             // 
             // splitter1
             // 
+            this.splitter1.Enabled = false;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(240, 496);
@@ -521,7 +523,7 @@
             this.panel2.Controls.Add(this.midSideGlassHeightLabel);
             this.panel2.Controls.Add(this.rightSideGlassHeightLabel);
             this.panel2.Controls.Add(this.leftSideGlassHeightLabel);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.glassLabel);
             this.panel2.Controls.Add(this.splitter9);
             this.panel2.Controls.Add(this.midSideVALengthLabel);
             this.panel2.Controls.Add(this.midSideBSLengthLabel);
@@ -636,21 +638,22 @@
             this.leftSideGlassHeightLabel.TabIndex = 52;
             this.leftSideGlassHeightLabel.Text = "výška - 0mm";
             // 
-            // label1
+            // glassLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(600, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 24);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Sklo";
+            this.glassLabel.AutoSize = true;
+            this.glassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.glassLabel.Location = new System.Drawing.Point(600, 11);
+            this.glassLabel.Name = "glassLabel";
+            this.glassLabel.Size = new System.Drawing.Size(50, 24);
+            this.glassLabel.TabIndex = 51;
+            this.glassLabel.Text = "Sklo";
             // 
             // splitter9
             // 
+            this.splitter9.Enabled = false;
             this.splitter9.Location = new System.Drawing.Point(594, 0);
             this.splitter9.Name = "splitter9";
-            this.splitter9.Size = new System.Drawing.Size(206, 496);
+            this.splitter9.Size = new System.Drawing.Size(118, 496);
             this.splitter9.TabIndex = 49;
             this.splitter9.TabStop = false;
             // 
@@ -1076,6 +1079,7 @@
             // 
             // splitter8
             // 
+            this.splitter8.Enabled = false;
             this.splitter8.Location = new System.Drawing.Point(495, 0);
             this.splitter8.Name = "splitter8";
             this.splitter8.Size = new System.Drawing.Size(99, 496);
@@ -1084,6 +1088,7 @@
             // 
             // splitter7
             // 
+            this.splitter7.Enabled = false;
             this.splitter7.Location = new System.Drawing.Point(396, 0);
             this.splitter7.Name = "splitter7";
             this.splitter7.Size = new System.Drawing.Size(99, 496);
@@ -1092,6 +1097,7 @@
             // 
             // splitter6
             // 
+            this.splitter6.Enabled = false;
             this.splitter6.Location = new System.Drawing.Point(297, 0);
             this.splitter6.Name = "splitter6";
             this.splitter6.Size = new System.Drawing.Size(99, 496);
@@ -1100,6 +1106,7 @@
             // 
             // splitter5
             // 
+            this.splitter5.Enabled = false;
             this.splitter5.Location = new System.Drawing.Point(198, 0);
             this.splitter5.Name = "splitter5";
             this.splitter5.Size = new System.Drawing.Size(99, 496);
@@ -1108,6 +1115,7 @@
             // 
             // splitter4
             // 
+            this.splitter4.Enabled = false;
             this.splitter4.Location = new System.Drawing.Point(99, 0);
             this.splitter4.Name = "splitter4";
             this.splitter4.Size = new System.Drawing.Size(99, 496);
@@ -1116,6 +1124,7 @@
             // 
             // splitter3
             // 
+            this.splitter3.Enabled = false;
             this.splitter3.Location = new System.Drawing.Point(0, 0);
             this.splitter3.Name = "splitter3";
             this.splitter3.Size = new System.Drawing.Size(99, 496);
@@ -1241,7 +1250,7 @@
         private System.Windows.Forms.ComboBox rightSideDoorComboBox;
         private System.Windows.Forms.Splitter splitter9;
         private System.Windows.Forms.Label leftSideGlassHeightLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label glassLabel;
         private System.Windows.Forms.Label midSideGlassWidthLabel;
         private System.Windows.Forms.Label rightSideGlassWidthLabel;
         private System.Windows.Forms.Label leftSideGlassWidthLabel;
