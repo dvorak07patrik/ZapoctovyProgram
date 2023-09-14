@@ -11,11 +11,11 @@ namespace ZPProgram
     //public instead of internatl becouse of error on Form2 constructor accesibility for Side type
     public class Side
     {
-        private double Length { get; set; }
-        private int Height { get; set; }
-        private double NumberOfDoors { get; set; }
-        private double Subtractor { get; set; }
-        private int DoorsComboIndex { get; set; }
+        public double Length { get; set; }
+        public int Height { get; set; }
+        public double NumberOfDoors { get; set; }
+        public double Subtractor { get; set; }
+        public int DoorsComboIndex { get; set; }
 
         // side constructor, assignes variables according to doorsComboIndex chosen by user
         public Side(int length, int height, int doorsComboIndex)
@@ -59,22 +59,6 @@ namespace ZPProgram
                 Subtractor = 24;
             }
         }
-
-        public double length
-        {
-            get { return Length; }
-        }
-
-        public double numberOfDoors
-        {
-            get { return NumberOfDoors; }
-        }
-
-        public double height
-        {
-            get { return Height; }
-        }
-
 
         // calls counting function for all parts
         public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) CountParts()
