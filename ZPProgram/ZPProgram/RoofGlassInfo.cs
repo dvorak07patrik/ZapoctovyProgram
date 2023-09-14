@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ZPProgram
 {
-    internal class RoofGlassInfo
+    public class RoofGlassInfo
     {
         private double RafterWidth = 100;
         //space for screw
-        private double RafterSpace = 20;
+        public double RafterSpace = 20;
         private double TopOverlap = 100;
-        private double BottomOverlap = 30;
-        private double SideOverlap = 20;
+        private double BottomOverlap = 130;
+        public double SideOverlap = 20;
 
         public int Count;
         public double Length;
@@ -23,7 +23,7 @@ namespace ZPProgram
 
         public RoofGlassInfo(int count, double length)
         {
-            Count = count;
+            Count = count - 1;
             Length = length;
         }
 
