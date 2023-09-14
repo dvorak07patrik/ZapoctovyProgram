@@ -32,7 +32,7 @@ namespace ZPProgram
             Garden = garden;
         }
 
-        private void Form1_Resize(object sender, System.EventArgs e)
+        private void Form2_Resize(object sender, System.EventArgs e)
         {
             Form2_Paint(sender, (PaintEventArgs)e);
         }
