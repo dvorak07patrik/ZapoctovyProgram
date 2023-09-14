@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace ZPProgram
 {
-    internal class RafterInfo
+    public class RafterInfo
     {
         public double Length { get; set; }
         public double Angle { get; set; }
         public int Count { get; set; }
         public double RafterSpacing { get; set; }
+        static int rafterWidth = 100;
+        static int divisorForGlassCount = 1000;
+
         public RafterInfo(double length, double angle) 
         {
             Length = length;
@@ -20,9 +23,10 @@ namespace ZPProgram
 
         public void CalculateRafter(double gardenWidth)
         {
-            Count = Convert.ToInt32((gardenWidth / 1000) + 1);
+            // formula for glass width to be around 1 meter
+            Count = Convert.ToInt32((gardenWidth / divisorForGlassCount) + 1);
             if (Count < 2) { Count = 2; }
-            RafterSpacing = (gardenWidth - (100 * Count)) / (Count - 1);
+            RafterSpacing = (gardenWidth - (rafterWidth * Count)) / (Count - 1);
         }
     }
 }
