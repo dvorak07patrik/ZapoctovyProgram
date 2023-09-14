@@ -32,6 +32,11 @@ namespace ZPProgram
             Garden = garden;
         }
 
+        private void Form1_Resize(object sender, System.EventArgs e)
+        {
+            Form2_Paint(sender, (PaintEventArgs)e);
+        }
+
         // paints 2D visualisation of sides
         private void Form2_Paint(object sender, PaintEventArgs e)
         {
