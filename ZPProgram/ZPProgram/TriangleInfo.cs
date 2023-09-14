@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZPProgram
 {
-    internal class TriangleInfo
+    public class TriangleInfo
     {
         public double Hypotenuse { get; set; }
         public double AngleAlpha { get; set; }
