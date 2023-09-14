@@ -1,6 +1,6 @@
 ﻿namespace ZPProgram
 {
-    partial class Form2
+    partial class WinterGardenVisualizationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,7 @@
             this.errorLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(13, 13);
+            this.errorLabel.Location = new System.Drawing.Point(836, 9);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.errorLabel.Size = new System.Drawing.Size(378, 25);
@@ -45,14 +45,14 @@
             this.errorLabel.Text = "Žádná strana nemůže být vykreslena !";
             this.errorLabel.Visible = false;
             // 
-            // Form2
+            // WinterGardenVisualizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1477, 876);
+            this.ClientSize = new System.Drawing.Size(1477, 971);
             this.Controls.Add(this.errorLabel);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "WinterGardenVisualizationForm";
+            this.Text = "Vizualizace zimní komponent zimní zahrady";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form2_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
