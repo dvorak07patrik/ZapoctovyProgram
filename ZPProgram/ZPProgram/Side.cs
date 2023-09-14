@@ -17,6 +17,15 @@ namespace ZPProgram
         public double Subtractor { get; set; }
         public int DoorsComboIndex { get; set; }
 
+        
+
+        static int GlassWidthOverlap = 13;
+        static int GlassHeightOverlap = -93;
+        static int HLLengthFormulaMultiplier = 40;
+        static int HLFinalSubstract = -76;
+        static int VSubstraction = -33;
+        static int VMSubstaction = VSubstraction;
+        static int VASubstraction = -4;
         // side constructor, assignes variables according to doorsComboIndex chosen by user
         public Side(int length, int height, int doorsComboIndex)
         {
@@ -61,72 +70,94 @@ namespace ZPProgram
         }
 
         // calls counting function for all parts
-        public ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) CountParts()
+        public ((int Count, int Length) HL, (int Count, int Length) V, (int Count, int Length) VM, (int Count, int Length) BS, (int Count, int Length) HS, (int Count, int Length) VA, (int Width, int Height) Glass) CountParts()
         {
-            return (CountHL(), CountV(), CountVM(), CountHSandBS(), CountHSandBS(), CountVA(), CountGlass());
+            ((int Count, int Length) HL, (int Count, int Length) V, (int Count, int Length) VM, (int Count, int Length) BS, (int Count, int Length) HS, (int Count, int Length) VA, (int Width, int Height) Glass) parts;
+            parts.HL = CountHL();
+            parts.V = CountV();
+            parts.VM = CountVM();
+            parts.BS = CountHSandBS();
+            parts.HS = CountHSandBS();
+            parts.VA = CountVA();
+            parts.Glass = CountGlass();
+            return (parts);
         }
 
+        // counts glass with the help of HL and V lengths
         public (int, int) CountGlass()
         {
-            int width = CountHL().Item2 + 13;
-            int height = CountV().Item2 - 94;
-            return (width, height);
+            (int width, int height) glass;
+            glass.width = CountHL().Item2 + GlassWidthOverlap;
+            glass.height = CountV().Item2 + GlassHeightOverlap;
+            return glass;
         }
 
 
+        // counts HL part with formula
+        // HLLengthFormulaMultiplier is for overlap of V parts
+        // HL is on the top and on the buttom of the door and rides inside of BS and HS for doors to be movable
         public (int, int) CountHL()
         {
-            int HLCount;
-            int HLLength;
-            HLCount = Convert.ToInt32(NumberOfDoors * 2);
-            // HLLength = Convert.ToInt32((Length - Subtractor) / NumberOfDoors);
-            HLLength = Convert.ToInt32(Math.Floor(((Length + ((NumberOfDoors - 1) * 40) - Subtractor) / NumberOfDoors) - 76));
-            return (HLCount, HLLength);
+            (int Count, int Length)HL;
+
+            HL.Count = Convert.ToInt32(NumberOfDoors * 2);
+            HL.Length = Convert.ToInt32(Math.Floor(((Length + ((NumberOfDoors - 1) * HLLengthFormulaMultiplier) - Subtractor) / NumberOfDoors) + HLFinalSubstract));
+            return HL;
         }
 
+        // counts V part with (height minus BS and HS)
+        // V part goes inside VA part in the system
         public (int, int) CountV()
         {
-            int VCount;
+            (int Count, int Length) V;
             if (DoorsComboIndex < 3)
             {
-                VCount = 2;
+                V.Count = 2;
             }
             else
             {
-                VCount = 4;
+                V.Count = 4;
             }
-            int VLength = Height - 33;
-            return (VCount, VLength);
+            V.Length = Height + VSubstraction;
+            return V;
 
         }
 
+        // counts VM part with (height minus BS and HS
+        // VM part in on one side of door or on each side and catches VM on other door to move more door at once
         public (int, int) CountVM()
         {
-            int VMCount = (Convert.ToInt32(NumberOfDoors) * 2) - CountV().Item1;
-            int VMLength = Height - 33;
-            return (VMCount, VMLength);
+            (int Count, int Length) VM;
+            VM.Count = (Convert.ToInt32(NumberOfDoors) * 2) - CountV().Item1;
+            VM.Length = Height + VMSubstaction;
+            return VM;
         }
 
+        // rail parts where doors move
+        // same length as side length
         public (int, int) CountHSandBS()
         {
-            int HSCount = 1;
-            int HSLength = Convert.ToInt32(Length);
-            return (HSCount, HSLength);
+            (int Count, int Length) HS;
+            HS.Count = 1;
+            HS.Length = Convert.ToInt32(Length);
+            return HS;
         }
 
+        // bar in which goes V part of doors
+        // count as higth minus small few milimeters
         public (int, int) CountVA()
         {
-            int VACount;
+            (int Count, int Length) VA;
             if (DoorsComboIndex < 3 || DoorsComboIndex == -1)
             {
-                VACount = 2;
+                VA.Count = 2;
             }
             else
             {
-                VACount = 4;
+                VA.Count = 4;
             }
-            int VALength = Height - 4;
-            return(VACount, VALength);
+            VA.Length = Height + VASubstraction;
+            return VA;
 
         }
 
