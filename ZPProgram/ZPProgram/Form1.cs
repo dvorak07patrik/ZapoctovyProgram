@@ -38,7 +38,7 @@ namespace ZPProgram
             // checking if user inputs are valid and if they are not making the side null to not be more calculated or painted and showing error
             // ----------------------------------------------------------------------------
             // for left side
-            if (tryIt(leftSideErrorProvider, leftSideLength, leftSideHeight, leftSide, leftSideDoorComboBox) == true)
+            if (validateSide(leftSideErrorProvider, leftSideLength, leftSideHeight, leftSide, leftSideDoorComboBox) == true)
             {
                 var leftSideParstValues = leftSide.CountParts();
                 showLeftSideOutputLabels(leftSide, leftSideParstValues);
@@ -49,7 +49,7 @@ namespace ZPProgram
             }
 
             // for right side
-            if (tryIt(rightSideErrorProvider, rightSideLength, rightSideHeight, rightSide, rightSideDoorComboBox) == true)
+            if (validateSide(rightSideErrorProvider, rightSideLength, rightSideHeight, rightSide, rightSideDoorComboBox) == true)
             {
                 var rightSideParstValues = rightSide.CountParts();
                 showRightSideOutputLabels(rightSide, rightSideParstValues);
@@ -60,7 +60,7 @@ namespace ZPProgram
             }
 
             // for mid side
-            if (tryIt(midSideErrorProvider, midSideLength, midSideHeight, midSide, midSideDoorComboBox) == true)
+            if (validateSide(midSideErrorProvider, midSideLength, midSideHeight, midSide, midSideDoorComboBox) == true)
             {
                 var midSideParstValues = midSide.CountParts();
                 showMidSideOutputLabels(midSide, midSideParstValues);
@@ -72,31 +72,61 @@ namespace ZPProgram
             // --------------------------------------------------------------------------
 
 
+            // making WinterGarden object based on longest side
+            double longestSide;
+            double highestHeight;
+            if (leftSide.Length > rightSide.Length)
+            {
+                longestSide = leftSide.Length;
+            }
+            else
+            {
+                longestSide = rightSide.Length;
+            }
+            if (leftSide.Height >= rightSide.Height && leftSide.Height >= midSide.Height) 
+            {
+                highestHeight = leftSide.Height;
+            }
+            else if (rightSide.Height >= midSide.Height)
+            {
+                highestHeight = rightSide.Height;
+            }
+            else
+            {
+                highestHeight = midSide.Height;
+            }
+
+            // longestSide + 200 for two joists width and midSide.Length + 200 for two joists width
+            WinterGarden winterGarden = new WinterGarden(longestSide + 200, midSide.Length + 200, Convert.ToDouble(backSideHeight.Value), highestHeight);
+            winterGarden.CalculateRoof();
+
+
             // creating and showing new Form for visualization of sides
-            Form2 form2 = new Form2(leftSide, rightSide, midSide);
+            Form2 form2 = new Form2(leftSide, rightSide, midSide, winterGarden);
             form2.Show();
         }
 
+        // validates side and shows errors for the user
         // else if not used to show all of the errors
-        private bool tryIt(ErrorProvider sideErrorProvider, NumericUpDown sideLength, NumericUpDown sideHeight, Side side, System.Windows.Forms.ComboBox sideDoorComboBox)
+        private bool validateSide(ErrorProvider sideErrorProvider, NumericUpDown sideLength, NumericUpDown sideHeight, Side side, System.Windows.Forms.ComboBox sideDoorComboBox)
         {
             bool check = true; 
-            if (side.length / side.numberOfDoors > 2000)
+            if (side.Length / side.NumberOfDoors > 2000)
             {
                 sideErrorProvider.SetError(sideLength, "Tato hodnota je pro zvolený počet dveří příliš vysoká!");
                 check = false;
             }
-            if (side.length / side.numberOfDoors < 500)
+            if (side.Length / side.NumberOfDoors < 500)
             {
                 sideErrorProvider.SetError(sideLength, "Tato hodnota je pro zvolený počet dveří příliš nízká!");
                 check = false;
             }
-            if (side.height < 500)
+            if (side.Height < 500)
             {
                 sideErrorProvider.SetError(sideHeight, "Tato hodnota je příliš nízká!");
                 check = false;
             }
-            if (side.height > 3500)
+            if (side.Height > 3500)
             {
                 sideErrorProvider.SetError(sideHeight, "Tato hodnota je příliš vysoká!");
                 check = false;

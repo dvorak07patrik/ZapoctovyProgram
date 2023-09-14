@@ -17,16 +17,18 @@ namespace ZPProgram
         private Side LeftSide;
         private Side RightSide;
         private Side MidSide;
+        private WinterGarden Garden;
         private int VWidth = 10;
         private int HLHeight = 15;
 
         // constructs Form2 variables
-        public Form2(Side leftSide, Side rightSide, Side midSide)
+        public Form2(Side leftSide, Side rightSide, Side midSide, WinterGarden garden)
         {
             InitializeComponent();
             LeftSide = leftSide;
             RightSide = rightSide;
             MidSide = midSide;
+            Garden = garden;
         }
 
         // paints 2D visualisation of sides
@@ -41,7 +43,7 @@ namespace ZPProgram
             Font font = new Font("Microsoft Sans Serif", 26, FontStyle.Bold, GraphicsUnit.Pixel);
             if (LeftSide != null)
             {
-                e.Graphics.DrawString("Levá strana - " + LeftSide.length.ToString()+ "mm", font, Brushes.Black, start, 30);
+                e.Graphics.DrawString("Levá strana - " + LeftSide.Length.ToString()+ "mm", font, Brushes.Black, start, 30);
                 ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) leftSidePartsValues = LeftSide.CountParts();
                 PrintSide(LeftSide, leftSidePartsValues, start, e);
                 start += 500;
@@ -49,7 +51,7 @@ namespace ZPProgram
             else { Size = new Size(Size.Width - 500, Size.Height); }
             if (MidSide != null)
             {
-                e.Graphics.DrawString("Prostřední strana - " + MidSide.length.ToString() + "mm", font, Brushes.Black, start, 30);
+                e.Graphics.DrawString("Prostřední strana - " + MidSide.Length.ToString() + "mm", font, Brushes.Black, start, 30);
                 ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) midSidePartsValues = MidSide.CountParts();
                 PrintSide(MidSide, midSidePartsValues, start, e);
                 start += 500;
@@ -57,7 +59,7 @@ namespace ZPProgram
             else { Size = new Size(Size.Width - 500, Size.Height); }
             if (RightSide != null)
             {
-                e.Graphics.DrawString("Pravá strana - " + RightSide.length.ToString() + "mm", font, Brushes.Black, start, 30);
+                e.Graphics.DrawString("Pravá strana - " + RightSide.Length.ToString() + "mm", font, Brushes.Black, start, 30);
                 ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) rightSidePartsValues = RightSide.CountParts();
                 PrintSide(RightSide, rightSidePartsValues, start, e);
                 start += 500;

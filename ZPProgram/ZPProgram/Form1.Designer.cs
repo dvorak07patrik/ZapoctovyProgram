@@ -45,6 +45,9 @@
             this.RightSideHeightLabel = new System.Windows.Forms.Label();
             this.LeftSideHeightLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.backSideHeight = new System.Windows.Forms.NumericUpDown();
+            this.backSideHeightLabel = new System.Windows.Forms.Label();
+            this.backSideMainLabel = new System.Windows.Forms.Label();
             this.midSideDoorComboBox = new System.Windows.Forms.ComboBox();
             this.rightSideDoorComboBox = new System.Windows.Forms.ComboBox();
             this.leftSideDoorComboBox = new System.Windows.Forms.ComboBox();
@@ -121,6 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.rightSideHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftSideHeight)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backSideHeight)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftSideErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideErrorProvider)).BeginInit();
@@ -377,6 +381,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.backSideHeight);
+            this.panel1.Controls.Add(this.backSideHeightLabel);
+            this.panel1.Controls.Add(this.backSideMainLabel);
             this.panel1.Controls.Add(this.midSideDoorComboBox);
             this.panel1.Controls.Add(this.rightSideDoorComboBox);
             this.panel1.Controls.Add(this.leftSideDoorComboBox);
@@ -402,8 +409,54 @@
             this.panel1.Controls.Add(this.splitter1);
             this.panel1.Location = new System.Drawing.Point(13, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 496);
+            this.panel1.Size = new System.Drawing.Size(741, 629);
             this.panel1.TabIndex = 12;
+            // 
+            // backSideHeight
+            // 
+            this.backSideHeight.BackColor = System.Drawing.SystemColors.Window;
+            this.backSideHeight.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.backSideHeight.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.backSideHeight.Location = new System.Drawing.Point(14, 588);
+            this.backSideHeight.Margin = new System.Windows.Forms.Padding(8);
+            this.backSideHeight.Maximum = new decimal(new int[] {
+            4000,
+            0,
+            0,
+            0});
+            this.backSideHeight.Name = "backSideHeight";
+            this.backSideHeight.Size = new System.Drawing.Size(170, 29);
+            this.backSideHeight.TabIndex = 24;
+            this.backSideHeight.Value = new decimal(new int[] {
+            2600,
+            0,
+            0,
+            0});
+            // 
+            // backSideHeightLabel
+            // 
+            this.backSideHeightLabel.AutoSize = true;
+            this.backSideHeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.backSideHeightLabel.Location = new System.Drawing.Point(10, 556);
+            this.backSideHeightLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.backSideHeightLabel.Name = "backSideHeightLabel";
+            this.backSideHeightLabel.Size = new System.Drawing.Size(145, 20);
+            this.backSideHeightLabel.TabIndex = 23;
+            this.backSideHeightLabel.Text = "Výška zadní strany:";
+            // 
+            // backSideMainLabel
+            // 
+            this.backSideMainLabel.AutoSize = true;
+            this.backSideMainLabel.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.backSideMainLabel.Location = new System.Drawing.Point(8, 501);
+            this.backSideMainLabel.Name = "backSideMainLabel";
+            this.backSideMainLabel.Size = new System.Drawing.Size(141, 33);
+            this.backSideMainLabel.TabIndex = 22;
+            this.backSideMainLabel.Text = "Celková výška";
             // 
             // midSideDoorComboBox
             // 
@@ -492,7 +545,7 @@
             this.splitter2.Enabled = false;
             this.splitter2.Location = new System.Drawing.Point(240, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(240, 496);
+            this.splitter2.Size = new System.Drawing.Size(240, 629);
             this.splitter2.TabIndex = 1;
             this.splitter2.TabStop = false;
             // 
@@ -501,13 +554,13 @@
             this.splitter1.Enabled = false;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(240, 496);
+            this.splitter1.Size = new System.Drawing.Size(240, 629);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(13, 558);
+            this.calculateButton.Location = new System.Drawing.Point(27, 710);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(155, 69);
             this.calculateButton.TabIndex = 13;
@@ -575,7 +628,7 @@
             this.panel2.Controls.Add(this.splitter3);
             this.panel2.Location = new System.Drawing.Point(760, 56);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(803, 496);
+            this.panel2.Size = new System.Drawing.Size(803, 629);
             this.panel2.TabIndex = 14;
             // 
             // midSideGlassWidthLabel
@@ -653,7 +706,7 @@
             this.splitter9.Enabled = false;
             this.splitter9.Location = new System.Drawing.Point(594, 0);
             this.splitter9.Name = "splitter9";
-            this.splitter9.Size = new System.Drawing.Size(118, 496);
+            this.splitter9.Size = new System.Drawing.Size(118, 629);
             this.splitter9.TabIndex = 49;
             this.splitter9.TabStop = false;
             // 
@@ -1082,7 +1135,7 @@
             this.splitter8.Enabled = false;
             this.splitter8.Location = new System.Drawing.Point(495, 0);
             this.splitter8.Name = "splitter8";
-            this.splitter8.Size = new System.Drawing.Size(99, 496);
+            this.splitter8.Size = new System.Drawing.Size(99, 629);
             this.splitter8.TabIndex = 5;
             this.splitter8.TabStop = false;
             // 
@@ -1091,7 +1144,7 @@
             this.splitter7.Enabled = false;
             this.splitter7.Location = new System.Drawing.Point(396, 0);
             this.splitter7.Name = "splitter7";
-            this.splitter7.Size = new System.Drawing.Size(99, 496);
+            this.splitter7.Size = new System.Drawing.Size(99, 629);
             this.splitter7.TabIndex = 4;
             this.splitter7.TabStop = false;
             // 
@@ -1100,7 +1153,7 @@
             this.splitter6.Enabled = false;
             this.splitter6.Location = new System.Drawing.Point(297, 0);
             this.splitter6.Name = "splitter6";
-            this.splitter6.Size = new System.Drawing.Size(99, 496);
+            this.splitter6.Size = new System.Drawing.Size(99, 629);
             this.splitter6.TabIndex = 3;
             this.splitter6.TabStop = false;
             // 
@@ -1109,7 +1162,7 @@
             this.splitter5.Enabled = false;
             this.splitter5.Location = new System.Drawing.Point(198, 0);
             this.splitter5.Name = "splitter5";
-            this.splitter5.Size = new System.Drawing.Size(99, 496);
+            this.splitter5.Size = new System.Drawing.Size(99, 629);
             this.splitter5.TabIndex = 2;
             this.splitter5.TabStop = false;
             // 
@@ -1118,7 +1171,7 @@
             this.splitter4.Enabled = false;
             this.splitter4.Location = new System.Drawing.Point(99, 0);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(99, 496);
+            this.splitter4.Size = new System.Drawing.Size(99, 629);
             this.splitter4.TabIndex = 1;
             this.splitter4.TabStop = false;
             // 
@@ -1127,7 +1180,7 @@
             this.splitter3.Enabled = false;
             this.splitter3.Location = new System.Drawing.Point(0, 0);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(99, 496);
+            this.splitter3.Size = new System.Drawing.Size(99, 629);
             this.splitter3.TabIndex = 0;
             this.splitter3.TabStop = false;
             // 
@@ -1147,7 +1200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1574, 661);
+            this.ClientSize = new System.Drawing.Size(1574, 807);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.panel1);
@@ -1163,6 +1216,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.leftSideHeight)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.backSideHeight)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftSideErrorProvider)).EndInit();
@@ -1259,6 +1313,9 @@
         private System.Windows.Forms.ErrorProvider leftSideErrorProvider;
         private System.Windows.Forms.ErrorProvider rightSideErrorProvider;
         private System.Windows.Forms.ErrorProvider midSideErrorProvider;
+        private System.Windows.Forms.Label backSideMainLabel;
+        private System.Windows.Forms.NumericUpDown backSideHeight;
+        private System.Windows.Forms.Label backSideHeightLabel;
     }
 }
 
