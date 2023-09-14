@@ -1,6 +1,6 @@
 ﻿namespace ZPProgram
 {
-    partial class Form1
+    partial class WinterGardenCalculatorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -117,6 +117,9 @@
             this.leftSideErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.rightSideErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.midSideErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.rafterCountLabel = new System.Windows.Forms.Label();
+            this.rafterLengthLabel = new System.Windows.Forms.Label();
+            this.rafterAngleLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midSideLength)).BeginInit();
@@ -381,6 +384,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.rafterAngleLabel);
+            this.panel1.Controls.Add(this.rafterLengthLabel);
+            this.panel1.Controls.Add(this.rafterCountLabel);
             this.panel1.Controls.Add(this.backSideHeight);
             this.panel1.Controls.Add(this.backSideHeightLabel);
             this.panel1.Controls.Add(this.backSideMainLabel);
@@ -1196,7 +1202,39 @@
             // 
             this.midSideErrorProvider.ContainerControl = this;
             // 
-            // Form1
+            // rafterCountLabel
+            // 
+            this.rafterCountLabel.AutoSize = true;
+            this.rafterCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rafterCountLabel.Location = new System.Drawing.Point(251, 509);
+            this.rafterCountLabel.Name = "rafterCountLabel";
+            this.rafterCountLabel.Size = new System.Drawing.Size(52, 24);
+            this.rafterCountLabel.TabIndex = 58;
+            this.rafterCountLabel.Text = "Krov";
+            // 
+            // rafterLengthLabel
+            // 
+            this.rafterLengthLabel.AutoSize = true;
+            this.rafterLengthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rafterLengthLabel.Location = new System.Drawing.Point(251, 556);
+            this.rafterLengthLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.rafterLengthLabel.Name = "rafterLengthLabel";
+            this.rafterLengthLabel.Size = new System.Drawing.Size(54, 20);
+            this.rafterLengthLabel.TabIndex = 59;
+            this.rafterLengthLabel.Text = "Délka:";
+            // 
+            // rafterAngleLabel
+            // 
+            this.rafterAngleLabel.AutoSize = true;
+            this.rafterAngleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rafterAngleLabel.Location = new System.Drawing.Point(251, 588);
+            this.rafterAngleLabel.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.rafterAngleLabel.Name = "rafterAngleLabel";
+            this.rafterAngleLabel.Size = new System.Drawing.Size(81, 20);
+            this.rafterAngleLabel.TabIndex = 60;
+            this.rafterAngleLabel.Text = "Úhel řezu:";
+            // 
+            // WinterGardenCalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1206,7 +1244,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.Name = "Form1";
+            this.Name = "WinterGardenCalculatorForm";
             this.Text = "Kalkulátor zimní zahrady";
             ((System.ComponentModel.ISupportInitialize)(this.leftSideLength)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightSideLength)).EndInit();
@@ -1316,6 +1354,9 @@
         private System.Windows.Forms.Label backSideMainLabel;
         private System.Windows.Forms.NumericUpDown backSideHeight;
         private System.Windows.Forms.Label backSideHeightLabel;
+        private System.Windows.Forms.Label rafterAngleLabel;
+        private System.Windows.Forms.Label rafterLengthLabel;
+        private System.Windows.Forms.Label rafterCountLabel;
     }
 }
 

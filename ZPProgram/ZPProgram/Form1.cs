@@ -12,9 +12,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ZPProgram
 {
-    public partial class Form1 : Form
+    public partial class WinterGardenCalculatorForm : Form
     {
-        public Form1()
+        public WinterGardenCalculatorForm()
         {
             InitializeComponent();
 
@@ -45,7 +45,7 @@ namespace ZPProgram
             }
             else
             {
-                leftSide = null;
+                leftSide.Length = 0;
             }
 
             // for right side
@@ -56,7 +56,7 @@ namespace ZPProgram
             }
             else
             {
-                rightSide = null;
+                rightSide.Length = 0;
             }
 
             // for mid side
@@ -67,10 +67,11 @@ namespace ZPProgram
             }
             else
             {
-                midSide = null;
+                midSide.Length = 0;
             }
             // --------------------------------------------------------------------------
 
+            
 
             // making WinterGarden object based on longest side
             double longestSide;
@@ -96,13 +97,17 @@ namespace ZPProgram
                 highestHeight = midSide.Height;
             }
 
+            int rafterWidth = 100;
+            
+
             // longestSide + 200 for two joists width and midSide.Length + 200 for two joists width
-            WinterGarden winterGarden = new WinterGarden(longestSide + 200, midSide.Length + 200, Convert.ToDouble(backSideHeight.Value), highestHeight);
+            WinterGarden winterGarden = new WinterGarden(longestSide + 2 * (rafterWidth), midSide.Length + (2 * rafterWidth), Convert.ToDouble(backSideHeight.Value), highestHeight);
             winterGarden.CalculateRoof();
+            if (leftSide.Length != 0 || rightSide.Length != 0) { showRafterOutputLabels(winterGarden.Rafter); }
 
 
             // creating and showing new Form for visualization of sides
-            Form2 form2 = new Form2(leftSide, rightSide, midSide, winterGarden);
+            WinterGardenVisualizationForm form2 = new WinterGardenVisualizationForm(leftSide, rightSide, midSide, winterGarden);
             form2.Show();
         }
 
@@ -110,23 +115,28 @@ namespace ZPProgram
         // else if not used to show all of the errors
         private bool validateSide(ErrorProvider sideErrorProvider, NumericUpDown sideLength, NumericUpDown sideHeight, Side side, System.Windows.Forms.ComboBox sideDoorComboBox)
         {
+            int maxDoorLength = 2000;
+            int minDoorLength = 500;
+            int minDoorHeight = 500;
+            int maxDoorHeigth = 3500;
+
             bool check = true; 
-            if (side.Length / side.NumberOfDoors > 2000)
+            if (side.Length / side.NumberOfDoors > maxDoorLength)
             {
                 sideErrorProvider.SetError(sideLength, "Tato hodnota je pro zvolený počet dveří příliš vysoká!");
                 check = false;
             }
-            if (side.Length / side.NumberOfDoors < 500)
+            if (side.Length / side.NumberOfDoors < minDoorLength)
             {
                 sideErrorProvider.SetError(sideLength, "Tato hodnota je pro zvolený počet dveří příliš nízká!");
                 check = false;
             }
-            if (side.Height < 500)
+            if (side.Height < minDoorHeight)
             {
                 sideErrorProvider.SetError(sideHeight, "Tato hodnota je příliš nízká!");
                 check = false;
             }
-            if (side.Height > 3500)
+            if (side.Height > maxDoorHeigth)
             {
                 sideErrorProvider.SetError(sideHeight, "Tato hodnota je příliš vysoká!");
                 check = false;
@@ -151,77 +161,84 @@ namespace ZPProgram
 
         // functions for showing outputs of calculating side parts values
         // -----------------------------------------------------------------------------------------------------------
-        private void showLeftSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) leftSidePartsValues)
+        private void showLeftSideOutputLabels(Side side, ((int Count, int Length) HL, (int Count, int Length) V, (int Count, int Length) VM, (int Count, int Length) BS, (int Count, int Length) HS, (int Count, int Length) VA, (int Width, int Height) Glass) leftSidePartsValues)
         {
-            leftSideHLCountLabel.Text = leftSidePartsValues.Item1.Item1 + "ks";
-            leftSideHLLengthLabel.Text = leftSidePartsValues.Item1.Item2 + "mm";
+            leftSideHLCountLabel.Text = leftSidePartsValues.HL.Count + "ks";
+            leftSideHLLengthLabel.Text = leftSidePartsValues.HL.Length + "mm";
 
-            leftSideVCountLabel.Text = leftSidePartsValues.Item2.Item1 + "ks";
-            leftSideVLengthLabel.Text = leftSidePartsValues.Item2.Item2 + "mm";
+            leftSideVCountLabel.Text = leftSidePartsValues.V.Count + "ks";
+            leftSideVLengthLabel.Text = leftSidePartsValues.V.Length + "mm";
 
-            leftSideVMCountLabel.Text = leftSidePartsValues.Item3.Item1 + "ks";
-            leftSideVMLengthLabel.Text = leftSidePartsValues.Item3.Item2 + "mm";
+            leftSideVMCountLabel.Text = leftSidePartsValues.VM.Count + "ks";
+            leftSideVMLengthLabel.Text = leftSidePartsValues.VM.Length + "mm";
 
-            leftSideHSCountLabel.Text = leftSidePartsValues.Item4.Item1 + "ks";
-            leftSideHSLengthLabel.Text = leftSidePartsValues.Item4.Item2 + "mm";
+            leftSideHSCountLabel.Text = leftSidePartsValues.BS.Count + "ks";
+            leftSideHSLengthLabel.Text = leftSidePartsValues.BS.Length + "mm";
 
-            leftSideBSCountLabel.Text = leftSidePartsValues.Item5.Item1 + "ks";
-            leftSideBSLengthLabel.Text = leftSidePartsValues.Item5.Item2 + "mm";
+            leftSideBSCountLabel.Text = leftSidePartsValues.HS.Count + "ks";
+            leftSideBSLengthLabel.Text = leftSidePartsValues.HS.Length + "mm";
 
-            leftSideVACountLabel.Text = leftSidePartsValues.Item6.Item1 + "ks";
-            leftSideVALengthLabel.Text = leftSidePartsValues.Item6.Item2 + "mm";
+            leftSideVACountLabel.Text = leftSidePartsValues.VA.Count + "ks";
+            leftSideVALengthLabel.Text = leftSidePartsValues.VA.Length + "mm";
 
-            leftSideGlassHeightLabel.Text = "výška - " + leftSidePartsValues.Item7.Item2 + "mm";
-            leftSideGlassWidthLabel.Text = "šířka - " + leftSidePartsValues.Item7.Item1 + "mm";
+            leftSideGlassHeightLabel.Text = "výška - " + leftSidePartsValues.Glass.Height + "mm";
+            leftSideGlassWidthLabel.Text = "šířka - " + leftSidePartsValues.Glass.Width + "mm";
         }
 
-        private void showRightSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) rightSidePartsValues)
+        private void showRightSideOutputLabels(Side side, ((int Count, int Length) HL, (int Count, int Length) V, (int Count, int Length) VM, (int Count, int Length) BS, (int Count, int Length) HS, (int Count, int Length) VA, (int Width, int Height) Glass) rightSidePartsValues)
         {
-            rightSideHLCountLabel.Text = rightSidePartsValues.Item1.Item1 + "ks";
-            rightSideHLLengthLabel.Text = rightSidePartsValues.Item1.Item2 + "mm";
+            rightSideHLCountLabel.Text = rightSidePartsValues.HL.Count + "ks";
+            rightSideHLLengthLabel.Text = rightSidePartsValues.HL.Length + "mm";
 
-            rightSideVCountLabel.Text = rightSidePartsValues.Item2.Item1 + "ks";
-            rightSideVLengthLabel.Text = rightSidePartsValues.Item2.Item2 + "mm";
+            rightSideVCountLabel.Text = rightSidePartsValues.V.Count + "ks";
+            rightSideVLengthLabel.Text = rightSidePartsValues.V.Length + "mm";
 
-            rightSideVMCountLabel.Text = rightSidePartsValues.Item3.Item1 + "ks";
-            rightSideVMLengthLabel.Text = rightSidePartsValues.Item3.Item2 + "mm";
+            rightSideVMCountLabel.Text = rightSidePartsValues.VM.Count + "ks";
+            rightSideVMLengthLabel.Text = rightSidePartsValues.VM.Length + "mm";
 
-            rightSideHSCountLabel.Text = rightSidePartsValues.Item4.Item1 + "ks";
-            rightSideHSLengthLabel.Text = rightSidePartsValues.Item4.Item2 + "mm";
+            rightSideHSCountLabel.Text = rightSidePartsValues.BS.Count + "ks";
+            rightSideHSLengthLabel.Text = rightSidePartsValues.BS.Length + "mm";
 
-            rightSideBSCountLabel.Text = rightSidePartsValues.Item5.Item1 + "ks";
-            rightSideBSLengthLabel.Text = rightSidePartsValues.Item5.Item2 + "mm";
+            rightSideBSCountLabel.Text = rightSidePartsValues.HS.Count + "ks";
+            rightSideBSLengthLabel.Text = rightSidePartsValues.HS.Length + "mm";
 
-            rightSideVACountLabel.Text = rightSidePartsValues.Item6.Item1 + "ks";
-            rightSideVALengthLabel.Text = rightSidePartsValues.Item6.Item2 + "mm";
+            rightSideVACountLabel.Text = rightSidePartsValues.VA.Count + "ks";
+            rightSideVALengthLabel.Text = rightSidePartsValues.VA.Length + "mm";
 
-            rightSideGlassHeightLabel.Text = "výška - " + rightSidePartsValues.Item7.Item2 + "mm";
-            rightSideGlassWidthLabel.Text = "šířka - " + rightSidePartsValues.Item7.Item1 + "mm";
+            rightSideGlassHeightLabel.Text = "výška - " + rightSidePartsValues.Glass.Height + "mm";
+            rightSideGlassWidthLabel.Text = "šířka - " + rightSidePartsValues.Glass.Width + "mm";
         }
 
-        private void showMidSideOutputLabels(Side side, ((int, int), (int, int), (int, int), (int, int), (int, int), (int, int), (int, int)) midSidePartsValues)
+        private void showMidSideOutputLabels(Side side, ((int Count, int Length) HL, (int Count, int Length) V, (int Count, int Length) VM, (int Count, int Length) BS, (int Count, int Length) HS, (int Count, int Length) VA, (int Width, int Height) Glass) midSidePartsValues)
         { 
-            midSideHLCountLabel.Text = midSidePartsValues.Item1.Item1 + "ks";
-            midSideHLLengthLabel.Text = midSidePartsValues.Item1.Item2 + "mm";
+            midSideHLCountLabel.Text = midSidePartsValues.HL.Count + "ks";
+            midSideHLLengthLabel.Text = midSidePartsValues.HL.Length + "mm";
 
-            midSideVCountLabel.Text = midSidePartsValues.Item2.Item1 + "ks";
-            midSideVLengthLabel.Text = midSidePartsValues.Item2.Item2 + "mm";
+            midSideVCountLabel.Text = midSidePartsValues.V.Count + "ks";
+            midSideVLengthLabel.Text = midSidePartsValues.V.Length + "mm";
 
-            midSideVMCountLabel.Text = midSidePartsValues.Item3.Item1 + "ks";
-            midSideVMLengthLabel.Text = midSidePartsValues.Item3.Item2 + "mm";
+            midSideVMCountLabel.Text = midSidePartsValues.VM.Count + "ks";
+            midSideVMLengthLabel.Text = midSidePartsValues.VM.Length + "mm";
 
-            midSideHSCountLabel.Text = midSidePartsValues.Item4.Item1 + "ks";
-            midSideHSLengthLabel.Text = midSidePartsValues.Item4.Item2 + "mm";
+            midSideHSCountLabel.Text = midSidePartsValues.BS.Count + "ks";
+            midSideHSLengthLabel.Text = midSidePartsValues.BS.Length + "mm";
 
-            midSideBSCountLabel.Text = midSidePartsValues.Item5.Item1 + "ks";
-            midSideBSLengthLabel.Text = midSidePartsValues.Item5.Item2 + "mm";
+            midSideBSCountLabel.Text = midSidePartsValues.HS.Count + "ks";
+            midSideBSLengthLabel.Text = midSidePartsValues.HS.Length + "mm";
 
-            midSideVACountLabel.Text = midSidePartsValues.Item6.Item1 + "ks";
-            midSideVALengthLabel.Text = midSidePartsValues.Item6.Item2 + "mm";
+            midSideVACountLabel.Text = midSidePartsValues.VA.Count + "ks";
+            midSideVALengthLabel.Text = midSidePartsValues.VA.Length + "mm";
 
-            midSideGlassHeightLabel.Text = "výška - " + midSidePartsValues.Item7.Item2 + "mm";
-            midSideGlassWidthLabel.Text = "šířka - " + midSidePartsValues.Item7.Item1 + "mm";
+            midSideGlassHeightLabel.Text = "výška - " + midSidePartsValues.Glass.Height + "mm";
+            midSideGlassWidthLabel.Text = "šířka - " + midSidePartsValues.Glass.Width + "mm";
         }
         // -----------------------------------------------------------------------------------------------------------
+
+        private void showRafterOutputLabels(RafterInfo rafter)
+        {
+            rafterCountLabel.Text = "Krov - " + rafter.Count.ToString() + " ks";
+            rafterAngleLabel.Text = "Úhel řezu: " + Math.Round(rafter.Angle, 2).ToString();
+            rafterLengthLabel.Text = "Délka: " + Math.Round(rafter.Length, 1).ToString() + "mm";
+        }
     }
 }
