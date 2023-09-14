@@ -31,6 +31,14 @@
    First Window also fills the components details.
    If you want to change input dimensions just switch to the first window, change your dimensions and click the button "Spočítej". New window will
    pop-up so you can compare it to the first one and so on.
+   Parts:
+   HL - HL is on the top and on the buttom of the door and rides inside of BS and HS for doors to be movable
+   V - V part goes inside VA part in the system and is always just on one side of the door
+   VM - VM part in on one side of door or on each side and catches VM on other door to move more door at once
+   HS - HS part is a top rail part where doors move
+   BS - BS part is a bottom rail part where doors move
+   VA - VA is a bar in which goes V part of the door
+   Glass - glass surrounded by HL on the top and buttom and VM and V on sides
 
 8) Result did not appear:
 
