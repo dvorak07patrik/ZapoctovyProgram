@@ -15,6 +15,7 @@ namespace ZPProgram
         public TriangleInfo Triangle;
         public RafterInfo Rafter;
         public RoofGlassInfo RoofGlass;
+        static int rafterWidth = 100;
 
 
         public WinterGarden(double length, double width, double backHeight, double frontHeight) 
@@ -22,15 +23,15 @@ namespace ZPProgram
             Length = length;
             Width = width;
             BackHeight = backHeight;
-            FrontHeight = frontHeight + 100;
+            FrontHeight = frontHeight + rafterWidth;
         }
 
         public void CalculateRoof()
         {
             // calculation of glass triangle
             // minus upper rafter
-            double shortLeg = BackHeight - 100 - FrontHeight;
-            double longLeg = Length - 200;
+            double shortLeg = BackHeight - rafterWidth - FrontHeight;
+            double longLeg = Length - (2 * rafterWidth);
             Triangle = new TriangleInfo(shortLeg, longLeg);
             Triangle.CalculateTriangle();
 
